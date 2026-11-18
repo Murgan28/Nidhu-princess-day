@@ -1,0 +1,2951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Princess Day, Nidhu ✨ Royal Barbie Couture Palace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. BARBIE PRINCESS PINK HAUTE COUTURE PALETTE & SMOOTH PHYSICS
+       ========================================================================== */
+    :root {
+      --bg-blush-light: #fff0f7;
+      --bg-barbie-soft: #ffd1e8;
+      --bg-barbie-mid: #ff9ec9;
+      --bg-barbie-deep: #ff5ca8;
+      --barbie-hot: #d90865;
+      --barbie-vivid: #ff1481;
+      --barbie-magenta: #8c0542;
+      --plum-ink: #3d041e;
+      --plum-soft: #6e133d;
+      --gold-bright: #fff0b8;
+      --gold-metallic: #d4af37;
+      --gold-deep: #997414;
+      --glass-surface: rgba(255, 255, 255, 0.82);
+      --border-pink: rgba(217, 8, 101, 0.24);
+      --border-gold: rgba(212, 175, 55, 0.65);
+      --shadow-couture: 0 28px 65px rgba(165, 8, 78, 0.18), 0 2px 20px rgba(255, 255, 255, 0.92) inset;
+      --shadow-hover: 0 32px 75px rgba(217, 8, 101, 0.28), 0 0 25px rgba(212, 175, 55, 0.4);
+      --btn-royal: linear-gradient(135deg, #ff1481 0%, #d40863 52%, #910544 100%);
+      --gold-foil-text: linear-gradient(135deg, #7a0439 0%, #d90865 32%, #b8860b 68%, #7a0439 100%);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--plum-ink);
+      background: linear-gradient(160deg, #fff2f9 0%, #ffd4ea 35%, #ffb3d9 70%, #ff8fc7 100%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ==========================================================================
+       2. BARBIE PRINCESS SILK BACKCOVER, CASTLE WATERMARK & CURSOR HALO
+       ========================================================================== */
+    .barbie-silk-backcover {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.92) 0%, transparent 42%),
+        radial-gradient(circle at 85% 20%, rgba(255, 215, 0, 0.26) 0%, transparent 38%),
+        radial-gradient(circle at 50% 80%, rgba(255, 20, 129, 0.24) 0%, transparent 52%),
+        linear-gradient(180deg, #fff5fa 0%, #ffd6eb 48%, #ffadd6 100%);
+    }
+
+    .palace-watermark-svg {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1540px;
+      height: auto;
+      z-index: -2;
+      opacity: 0.14;
+      pointer-events: none;
+    }
+
+    #petalCanvas {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .cursor-halo {
+      position: fixed;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 20, 129, 0.15) 0%, rgba(212, 175, 55, 0.06) 45%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      transform: translate(-50%, -50%);
+      left: -300px;
+      top: -300px;
+    }
+
+    .scroll-ribbon {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #d4af37, #ff1481, #ffd700, #ff1481);
+      width: 0%;
+      z-index: 3000;
+      box-shadow: 0 0 15px rgba(255, 20, 129, 0.6);
+    }
+
+    /* ==========================================================================
+       3. KINETIC MARQUEE RIBBON & FLOATING NAVIGATION DOCK
+       ========================================================================== */
+    .couture-marquee {
+      width: 100%;
+      overflow: hidden;
+      background: rgba(255, 245, 251, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--border-gold);
+      padding: 11px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 32s linear infinite;
+    }
+
+    .marquee-item {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--barbie-magenta);
+      padding: 0 32px;
+      white-space: nowrap;
+    }
+
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .couture-nav {
+      position: fixed;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2500;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 7px 14px;
+      background: rgba(255, 248, 252, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 999px;
+      box-shadow: 0 14px 40px rgba(165, 8, 78, 0.22);
+      max-width: 96vw;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .couture-nav::-webkit-scrollbar { display: none; }
+
+    .nav-item {
+      text-decoration: none;
+      color: var(--plum-soft);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      padding: 8px 13px;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: all 0.35s var(--ease-spring);
+    }
+
+    .nav-item:hover, .nav-item.active {
+      background: var(--btn-royal);
+      color: #fff;
+      box-shadow: 0 5px 15px rgba(217, 8, 101, 0.38);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================================
+       4. SCROLL REVEAL ANIMATION & LUXURY BUTTONS
+       ========================================================================== */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 100px 24px 65px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 52px;
+    }
+
+    .crown-pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      color: var(--barbie-hot);
+      padding: 7px 22px;
+      border: 1.5px solid var(--border-gold);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 6px 18px rgba(217, 8, 101, 0.10);
+      margin-bottom: 15px;
+    }
+
+    .royal-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.35rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      background: var(--gold-foil-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 14px;
+    }
+
+    .royal-section-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.18rem, 2vw, 1.36rem);
+      font-style: italic;
+      color: var(--plum-soft);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .barbie-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--btn-royal);
+      border: 1.5px solid #ffe699;
+      cursor: pointer;
+      text-decoration: none;
+      overflow: hidden;
+      transition: all 0.35s var(--ease-spring);
+      box-shadow: 0 12px 28px rgba(217, 8, 101, 0.32), inset 0 1px 2px rgba(255, 255, 255, 0.65);
+    }
+
+    .barbie-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 18px 36px rgba(217, 8, 101, 0.45), 0 0 20px rgba(212, 175, 55, 0.55);
+    }
+
+    .barbie-btn.soft-outline {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--barbie-magenta);
+      border-color: var(--border-gold);
+      box-shadow: 0 6px 18px rgba(217, 8, 101, 0.12);
+    }
+
+    .barbie-btn.soft-outline:hover, .barbie-btn.soft-outline.active-pill {
+      background: var(--btn-royal);
+      color: #fff;
+      border-color: #ffe699;
+    }
+
+    .couture-glass-card {
+      background: var(--glass-surface);
+      backdrop-filter: blur(26px);
+      -webkit-backdrop-filter: blur(26px);
+      border: 2px solid rgba(255, 255, 255, 0.95);
+      outline: 1px solid var(--border-pink);
+      border-radius: 34px;
+      padding: 44px;
+      box-shadow: var(--shadow-couture);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ==========================================================================
+       SECTION I: THE SOVEREIGN PRINCESS DAY OVERTURE
+       ========================================================================== */
+    #sec-welcome {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 115px;
+    }
+
+    .welcome-palace-frame {
+      width: 100%;
+      padding: 62px 38px;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(255, 182, 219, 0.6), transparent 65%),
+        rgba(255, 250, 253, 0.88);
+      border: 2.5px solid #fff;
+      outline: 1.5px solid var(--border-gold);
+      box-shadow: 0 30px 75px rgba(175, 10, 85, 0.24), inset 0 0 50px #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .corner-filigree {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .cf-tl { top: 18px; left: 18px; }
+    .cf-tr { top: 18px; right: 18px; transform: scaleX(-1); }
+    .cf-bl { bottom: 18px; left: 18px; transform: scaleY(-1); }
+    .cf-br { bottom: 18px; right: 18px; transform: scale(-1, -1); }
+
+    .princess-day-script-banner {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2.2rem, 4.8vw, 3.5rem);
+      color: var(--barbie-hot);
+      text-shadow: 0 2px 0 #fff, 0 8px 22px rgba(217, 8, 101, 0.25);
+      margin-bottom: 6px;
+    }
+
+    .hero-tiara-svg {
+      width: 122px;
+      height: 68px;
+      margin: 0 auto 4px;
+      filter: drop-shadow(0 6px 16px rgba(212, 175, 55, 0.5));
+      animation: crownFloat 3.8s ease-in-out infinite;
+    }
+
+    @keyframes crownFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    .encrafted-name-stage {
+      position: relative;
+      display: inline-block;
+      padding: 6px 36px;
+      margin: 2px 0 6px;
+    }
+
+    .encrafted-watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(4.2rem, 12vw, 9rem);
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(217, 8, 101, 0.12);
+      letter-spacing: 16px;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .encrafted-main-name {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(5.2rem, 14vw, 9.5rem);
+      line-height: 1.04;
+      background: linear-gradient(115deg, #7a0439 0%, #ff1481 26%, #d4af37 50%, #ff1481 74%, #7a0439 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: foilShine 5.5s linear infinite;
+      filter: drop-shadow(0 4px 0 #fff) drop-shadow(0 12px 28px rgba(217, 8, 101, 0.32));
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes foilShine {
+      to { background-position: 200% center; }
+    }
+
+    .hero-editorial-subtitle {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.76rem;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+      color: var(--plum-soft);
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .hero-tagline-card {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      padding: 22px 32px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255, 245, 250, 0.96), rgba(255, 224, 240, 0.88));
+      border: 1.5px solid var(--border-gold);
+      box-shadow: 0 10px 30px rgba(217, 8, 101, 0.12);
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-tagline-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.24rem, 2.3vw, 1.52rem);
+      font-style: italic;
+      font-weight: 600;
+      color: var(--plum-ink);
+      line-height: 1.52;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .hero-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .couture-badge {
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--border-gold);
+      color: var(--barbie-magenta);
+      box-shadow: 0 4px 14px rgba(217, 8, 101, 0.08);
+    }
+
+    /* ==========================================================================
+       SECTION II: INTERACTIVE BARBIE CASTLE ("CLICK TO UNLOCK SURPRISES")
+       ========================================================================== */
+    .castle-interactive-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 940px) {
+      .castle-interactive-layout { grid-template-columns: 1fr; }
+    }
+
+    .castle-stage-box {
+      position: relative;
+      background: radial-gradient(circle at 50% 25%, #fff7fb 0%, #ffc8e4 62%, #ff94c9 100%);
+      border: 2px solid var(--border-gold);
+      border-radius: 30px;
+      padding: 26px 18px 18px;
+      text-align: center;
+      box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.85), 0 18px 42px rgba(217, 8, 101, 0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .interactive-castle-svg {
+      width: 100%;
+      max-width: 510px;
+      height: auto;
+      margin: 0 auto;
+      filter: drop-shadow(0 14px 28px rgba(140, 5, 66, 0.25));
+    }
+
+    .castle-hotspot {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .castle-hotspot:hover {
+      filter: brightness(1.15) drop-shadow(0 0 16px #ffd700);
+    }
+
+    .hotspot-pulse {
+      animation: pulseBeacon 2.2s infinite;
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+
+    @keyframes pulseBeacon {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.24); }
+    }
+
+    .castle-surprise-card {
+      background: linear-gradient(145deg, #ffffff 0%, #fff2f8 100%);
+      border: 2px solid var(--border-gold);
+      border-radius: 30px;
+      padding: 34px 28px;
+      box-shadow: 0 20px 48px rgba(217, 8, 101, 0.16);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .gem-progress-bar {
+      width: 100%;
+      height: 10px;
+      background: #ffe0f0;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 12px 0 18px;
+      border: 1px solid var(--border-pink);
+    }
+
+    .gem-progress-fill {
+      height: 100%;
+      width: 16.6%;
+      background: linear-gradient(90deg, #d4af37, #ff1481);
+      border-radius: 999px;
+      transition: width 0.5s var(--ease-spring);
+    }
+
+    .castle-progress-pills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tower-key-btn {
+      padding: 10px 8px;
+      border-radius: 12px;
+      border: 1px solid var(--border-pink);
+      background: #fff5fa;
+      color: var(--plum-ink);
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .tower-key-btn.unlocked, .tower-key-btn:hover {
+      background: var(--btn-royal);
+      color: #fff;
+      border-color: var(--gold-metallic);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       SECTION III: SINGLE MONUMENTAL PORTRAIT SANCTUARY (ONLY 1 PICTURE HOLDER)
+       ========================================================================== */
+    .shrine-showcase-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 440px 1fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 34px;
+    }
+
+    @media (max-width: 1080px) {
+      .shrine-showcase-wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+    }
+
+    .floating-quote-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .shrine-quote-wing {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 24px;
+      padding: 20px 22px;
+      box-shadow: 0 14px 34px rgba(217, 8, 101, 0.13);
+      transition: all 0.35s var(--ease-spring);
+    }
+
+    .shrine-quote-wing:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .wing-tag {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--barbie-hot);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .wing-quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 600;
+      color: var(--plum-ink);
+      line-height: 1.5;
+    }
+
+    /* THE SINGLE MONUMENTAL PORTRAIT FRAME */
+    .masterpiece-frame-monument {
+      width: 100%;
+      max-width: 440px;
+      padding: 22px 22px 26px;
+      border-radius: 240px 240px 36px 36px;
+      background: linear-gradient(135deg, #fff6cc 0%, #d4af37 25%, #ff69b4 55%, #d4af37 85%, #fff6cc 100%);
+      box-shadow:
+        0 30px 75px rgba(165, 8, 78, 0.36),
+        0 0 45px rgba(255, 215, 0, 0.55),
+        inset 0 0 22px rgba(255, 255, 255, 0.92);
+      position: relative;
+      text-align: center;
+      transition: transform 0.25s ease-out, background 0.5s ease;
+    }
+
+    .masterpiece-frame-monument.finish-rose {
+      background: linear-gradient(135deg, #ffd1e8 0%, #ff1481 35%, #ffb6dc 65%, #b50656 100%);
+    }
+
+    .masterpiece-frame-monument.finish-platinum {
+      background: linear-gradient(135deg, #ffffff 0%, #e8dff5 35%, #ff9ec9 70%, #ffffff 100%);
+    }
+
+    .frame-top-crown-crest {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 58px;
+      z-index: 10;
+      filter: drop-shadow(0 6px 14px rgba(140, 5, 66, 0.4));
+    }
+
+    .single-portrait-viewport {
+      width: 100%;
+      height: 530px;
+      border-radius: 220px 220px 24px 24px;
+      overflow: hidden;
+      position: relative;
+      background: radial-gradient(circle at 50% 35%, #fff0f7 0%, #ff9ec9 60%, #c2185b 100%);
+      border: 4px solid #fff;
+      box-shadow: inset 0 0 32px rgba(140, 5, 66, 0.35);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .single-portrait-viewport img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.7s var(--ease-out-expo), filter 0.3s ease;
+    }
+
+    .single-portrait-viewport:hover img {
+      transform: scale(1.04);
+    }
+
+    .portrait-magic-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 52% 15%, rgba(255, 250, 210, 0.45) 0%, transparent 20%),
+        linear-gradient(180deg, rgba(255, 20, 129, 0.08) 0%, transparent 45%, rgba(140, 5, 66, 0.28) 100%);
+      z-index: 3;
+    }
+
+    .portrait-engraved-plaque {
+      margin-top: 16px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 20px rgba(140, 5, 66, 0.16);
+    }
+
+    .plaque-script-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.05rem;
+      color: var(--barbie-hot);
+      line-height: 1.1;
+    }
+
+    .plaque-sub {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.64rem;
+      letter-spacing: 2px;
+      color: var(--plum-soft);
+      text-transform: uppercase;
+      margin-top: 4px;
+      font-weight: 700;
+    }
+
+    .portrait-fallback-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(255, 242, 249, 0.97), rgba(255, 190, 224, 0.95));
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      text-align: center;
+      z-index: 5;
+    }
+
+    .aura-lighting-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      background: rgba(255, 245, 251, 0.88);
+      border: 1px solid var(--border-gold);
+      border-radius: 22px;
+      padding: 20px 26px;
+      margin-top: 22px;
+    }
+
+    /* ==========================================================================
+       SECTION IV: "LIVING BARBIE" COUTURE ANATOMY LOOKBOOK
+       ========================================================================== */
+    .lookbook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .lookbook-feature-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid var(--border-pink);
+      border-radius: 26px;
+      padding: 26px 22px;
+      text-align: center;
+      transition: all 0.35s var(--ease-spring);
+      cursor: pointer;
+    }
+
+    .lookbook-feature-card:hover, .lookbook-feature-card.active-look {
+      border-color: var(--barbie-hot);
+      background: #fff;
+      transform: translateY(-7px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .lookbook-Spotlight-banner {
+      margin-top: 26px;
+      padding: 26px 32px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #d90865 0%, #7a0439 100%);
+      color: #fff;
+      text-align: center;
+      border: 2px solid #ffe699;
+      box-shadow: 0 18px 40px rgba(140, 5, 66, 0.28);
+    }
+
+    /* ==========================================================================
+       SECTION V: THE "XXII GOING ON XVIII" EDITORIAL DOSSIER
+       ========================================================================== */
+    .calibrator-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 900px) {
+      .calibrator-layout { grid-template-columns: 1fr; }
+    }
+
+    .stat-quad-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .stat-pink-box {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid var(--border-pink);
+      border-radius: 24px;
+      padding: 24px 18px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-pink-box:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-metallic);
+    }
+
+    .stat-big-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.9rem;
+      font-weight: 700;
+      color: var(--barbie-hot);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .barbie-range {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d4af37, #ff1481);
+      outline: none;
+      margin: 18px 0 10px;
+    }
+
+    .barbie-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #fff;
+      border: 3px solid var(--barbie-hot);
+      box-shadow: 0 0 12px var(--barbie-hot);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       SECTION VI: PRINCESS DAY GRAND BALLROOM & STARLIGHT DANCE CONSERVATORY
+       ========================================================================== */
+    .dance-ballroom-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1.2fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 960px) {
+      .dance-ballroom-layout { grid-template-columns: 1fr; }
+    }
+
+    .ballroom-stage-console {
+      background: radial-gradient(circle at 50% 20%, #ff85c1 0%, #8c0542 65%, #3d041e 100%);
+      border: 2.5px solid #ffd700;
+      border-radius: 30px;
+      padding: 26px 20px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 22px 50px rgba(140, 5, 66, 0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stage-spotlight-cone {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 280px;
+      height: 360px;
+      background: linear-gradient(180deg, rgba(255, 240, 200, 0.42) 0%, rgba(255, 20, 129, 0.12) 65%, transparent 100%);
+      clip-path: polygon(32% 0%, 68% 0%, 100% 100%, 0% 100%);
+      pointer-events: none;
+      animation: spotlightSway 4.5s ease-in-out infinite;
+    }
+
+    @keyframes spotlightSway {
+      0%, 100% { transform: translateX(-50%) rotate(-7deg); }
+      50% { transform: translateX(-50%) rotate(7deg); }
+    }
+
+    .vinyl-record {
+      width: 190px;
+      height: 190px;
+      margin: 10px auto 14px;
+      border-radius: 50%;
+      background: repeating-radial-gradient(circle at 50% 50%, #2b0214 0px, #2b0214 4px, #520628 5px, #2b0214 6px);
+      border: 3.5px solid #ffd700;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 20, 129, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: spinDisc 5.5s linear infinite;
+      animation-play-state: paused;
+      position: relative;
+      z-index: 2;
+    }
+
+    .vinyl-record.spinning {
+      animation-play-state: running;
+    }
+
+    @keyframes spinDisc {
+      to { transform: rotate(360deg); }
+    }
+
+    .vinyl-center-rose {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff1481, #d4af37);
+      border: 2px solid #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.58rem;
+      font-weight: 700;
+    }
+
+    #danceWaveCanvas {
+      width: 100%;
+      height: 92px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 230, 153, 0.4);
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    .choreo-cue-banner {
+      background: linear-gradient(135deg, #fff0f7, #ffd9ec);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      box-shadow: 0 8px 20px rgba(217, 8, 101, 0.1);
+    }
+
+    .eight-count-row {
+      display: flex;
+      gap: 6px;
+      margin: 12px 0;
+    }
+
+    .count-box {
+      flex: 1;
+      padding: 10px 0;
+      border-radius: 12px;
+      background: #fff;
+      border: 1.5px solid var(--border-pink);
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      transition: all 0.18s var(--ease-spring);
+    }
+
+    .count-box.active-beat {
+      background: var(--btn-royal);
+      color: #fff;
+      border-color: #ffd700;
+      transform: translateY(-4px) scale(1.06);
+      box-shadow: 0 8px 18px rgba(217, 8, 101, 0.4);
+    }
+
+    .seq-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 7px;
+      margin: 12px 0 18px;
+    }
+
+    .seq-note-btn {
+      height: 44px;
+      border-radius: 11px;
+      background: #fff;
+      border: 1.5px solid var(--border-pink);
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--plum-soft);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .seq-note-btn.armed {
+      background: linear-gradient(135deg, #ff1481, #ff7eb9);
+      color: #fff;
+      border-color: #ffd700;
+    }
+
+    .seq-note-btn.playing-step {
+      transform: scale(1.1);
+      box-shadow: 0 0 16px var(--barbie-hot);
+    }
+
+    /* ==========================================================================
+       SECTION VII: THE ROYAL TIARA & JEWEL ATELIER
+       ========================================================================== */
+    .jewel-atelier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .gemstone-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid var(--border-pink);
+      border-radius: 24px;
+      padding: 22px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.35s var(--ease-spring);
+    }
+
+    .gemstone-card:hover, .gemstone-card.active-gem {
+      transform: translateY(-6px);
+      border-color: var(--gold-metallic);
+      background: #fff;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .gem-svg-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 10px;
+      filter: drop-shadow(0 6px 12px rgba(217, 8, 101, 0.25));
+    }
+
+    /* ==========================================================================
+       SECTION VIII: THE VELVET ANTHOLOGY (QUOTE VAULT)
+       ========================================================================== */
+    .quotes-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+      gap: 22px;
+      margin-bottom: 28px;
+    }
+
+    .pink-quote-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1.5px solid var(--border-pink);
+      border-radius: 26px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 30px rgba(217, 8, 101, 0.11);
+      transition: all 0.35s var(--ease-spring);
+    }
+
+    .pink-quote-card:hover {
+      border-color: var(--barbie-hot);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* ==========================================================================
+       SECTION IX: THE ENCHANTED SPECULUM (ROYAL VANITY MIRROR)
+       ========================================================================== */
+    .vanity-mirror-oval {
+      width: 330px;
+      height: 410px;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      padding: 18px;
+      background: linear-gradient(135deg, #ffe699 0%, #d4af37 30%, #ff1481 65%, #ffd700 100%);
+      box-shadow: 0 24px 60px rgba(217, 8, 101, 0.32), 0 0 38px rgba(255, 215, 0, 0.55);
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-spring);
+    }
+
+    .vanity-mirror-oval:hover {
+      transform: scale(1.03);
+    }
+
+    .vanity-mirror-surface {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, #ffffff 0%, #ffe6f3 52%, #ffb6dc 100%);
+      border: 3px solid #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 34px;
+      text-align: center;
+      box-shadow: inset 0 0 38px rgba(217, 8, 101, 0.25);
+    }
+
+    /* ==========================================================================
+       SECTION X: 3D DUALITY REVOLVING PANELS
+       ========================================================================== */
+    .flip-cards-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .duality-flip-box {
+      height: 295px;
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .duality-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.75s var(--ease-spring);
+    }
+
+    .duality-flip-box:hover .duality-flip-inner,
+    .duality-flip-box.flipped .duality-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-side {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 28px;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid #fff;
+      box-shadow: 0 16px 38px rgba(217, 8, 101, 0.16);
+    }
+
+    .flip-side-front {
+      background: linear-gradient(145deg, #ffffff 0%, #ffd9ec 100%);
+    }
+
+    .flip-side-back {
+      background: linear-gradient(145deg, #d90865 0%, #6e0433 100%);
+      color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    /* ==========================================================================
+       SECTION XI: PRINCESS DAY SKY LANTERN WISH SANCTUARY
+       ========================================================================== */
+    .lantern-sanctuary-stage {
+      position: relative;
+      height: 350px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, #470524 0%, #8c0542 55%, #ff69b4 100%);
+      border: 2px solid #ffd700;
+      overflow: hidden;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.35);
+      margin-bottom: 22px;
+      cursor: pointer;
+    }
+
+    #lanternCanvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .lantern-overlay-caption {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.94);
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--plum-ink);
+      white-space: nowrap;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      pointer-events: none;
+    }
+
+    /* ==========================================================================
+       SECTION XII: BROTHER-TO-SISTER ROYAL MESSAGE & FOREVER RISHTA PROMISE
+       ========================================================================== */
+    .brother-tribute-monument {
+      max-width: 920px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #fffafd 0%, #ffe0f0 100%);
+      border: 3px double var(--barbie-hot);
+      outline: 2px solid var(--border-gold);
+      border-radius: 38px;
+      padding: 54px 44px;
+      box-shadow: 0 32px 80px rgba(165, 8, 78, 0.28), inset 0 0 40px #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wax-seal-crest {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background: radial-gradient(circle at 35% 30%, #ff4da6, #c2185b 68%, #6e0433 100%);
+      border: 2.5px solid #ffd700;
+      color: #fff5cc;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(194, 24, 91, 0.45);
+      transition: transform 0.35s var(--ease-spring);
+    }
+
+    .wax-seal-crest:hover {
+      transform: scale(1.1) rotate(8deg);
+    }
+
+    .brother-letter-body {
+      background: rgba(255, 255, 255, 0.94);
+      padding: 38px 36px;
+      border-radius: 28px;
+      border: 1.5px solid var(--border-gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.38rem;
+      line-height: 1.85;
+      color: var(--plum-ink);
+      box-shadow: 0 14px 36px rgba(217, 8, 101, 0.10);
+    }
+
+    /* HIGHLIGHTED FOREVER RISHTA SACRED VOW BOX */
+    .forever-rishta-highlight {
+      margin: 28px 0;
+      padding: 30px 32px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #ff1481 0%, #b50656 50%, #7a0439 100%);
+      color: #fff;
+      border: 2.5px solid #ffd700;
+      box-shadow: 0 20px 50px rgba(217, 8, 101, 0.42), 0 0 30px rgba(255, 215, 0, 0.5);
+      position: relative;
+      text-align: center;
+      animation: gentleGlowPulse 3.5s ease-in-out infinite;
+    }
+
+    @keyframes gentleGlowPulse {
+      0%, 100% { box-shadow: 0 20px 50px rgba(217, 8, 101, 0.42), 0 0 25px rgba(255, 215, 0, 0.45); }
+      50% { box-shadow: 0 24px 60px rgba(255, 20, 129, 0.65), 0 0 42px rgba(255, 215, 0, 0.85); }
+    }
+
+    .rishta-badge-top {
+      display: inline-block;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #3d041e;
+      background: linear-gradient(90deg, #fff0b8, #ffd700, #fff0b8);
+      padding: 6px 20px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .rishta-vow-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.38rem, 2.5vw, 1.72rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 1.58;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .rishta-forever-stamp {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.4rem;
+      color: #ffe699;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 48px 20px 70px;
+      color: var(--plum-soft);
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      .couture-glass-card, .welcome-palace-frame, .brother-tribute-monument { padding: 28px 18px; }
+      .brother-letter-body { padding: 24px 18px; font-size: 1.2rem; }
+      .forever-rishta-highlight { padding: 22px 18px; }
+      .single-portrait-viewport { height: 420px; }
+      .vanity-mirror-oval { width: 280px; height: 350px; }
+      .lantern-overlay-caption { font-size: 0.92rem; white-space: normal; width: 90%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP SCROLL PROGRESS RIBBON -->
+  <div class="scroll-ribbon" id="scrollRibbon"></div>
+
+  <!-- INTERACTIVE CURSOR ROSE-GOLD HALO -->
+  <div class="cursor-halo" id="cursorHalo"></div>
+
+  <!-- BARBIE PRINCESS PINK SILK BACKCOVER & CASTLE WATERMARK -->
+  <div class="barbie-silk-backcover"></div>
+  <svg class="palace-watermark-svg" viewBox="0 0 1440 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M160 480V290L210 180L260 290V480" stroke="#d90865" stroke-width="1.8"/>
+    <path d="M1180 480V290L1230 180L1280 290V480" stroke="#d90865" stroke-width="1.8"/>
+    <path d="M350 480V220L420 100L490 220V480" stroke="#d4af37" stroke-width="1.8"/>
+    <path d="M950 480V220L1020 100L1090 220V480" stroke="#d4af37" stroke-width="1.8"/>
+    <path d="M560 480V150L720 15L880 150V480" stroke="#d90865" stroke-width="2.2"/>
+    <circle cx="720" cy="175" r="54" stroke="#d4af37" stroke-width="1.8"/>
+  </svg>
+
+  <!-- ROSE PETAL & SPARKLE CANVAS -->
+  <canvas id="petalCanvas"></canvas>
+
+  <!-- FLOATING LUXURY NAVIGATION BAR -->
+  <nav class="couture-nav">
+    <a href="#sec-welcome" class="nav-item active">I. Palace</a>
+    <a href="#sec-castle" class="nav-item">II. Castle</a>
+    <a href="#sec-shrine" class="nav-item">III. Portrait</a>
+    <a href="#sec-lookbook" class="nav-item">IV. Barbie Look</a>
+    <a href="#sec-calibrator" class="nav-item">V. 22 • 18</a>
+    <a href="#sec-dance" class="nav-item">VI. Dance Gala</a>
+    <a href="#sec-jewels" class="nav-item">VII. Tiara Gems</a>
+    <a href="#sec-quotes" class="nav-item">VIII. Quotes</a>
+    <a href="#sec-mirror" class="nav-item">IX. Mirror</a>
+    <a href="#sec-duality" class="nav-item">X. Duality</a>
+    <a href="#sec-lanterns" class="nav-item">XI. Wishes</a>
+    <a href="#sec-brother" class="nav-item">XII. Brother's Note</a>
+  </nav>
+
+  <!-- ==========================================================================
+       SECTION I: THE SOVEREIGN PRINCESS DAY OVERTURE
+       ========================================================================== -->
+  <section id="sec-welcome" class="reveal-on-scroll is-visible">
+    <div class="welcome-palace-frame">
+      <svg class="corner-filigree cf-tl" viewBox="0 0 100 100" fill="none">
+        <path d="M6 94V24C6 14 14 6 24 6H94" stroke="#d4af37" stroke-width="2"/>
+        <path d="M16 74V28C16 21 21 16 28 16H74" stroke="#d90865" stroke-width="1.2"/>
+        <circle cx="24" cy="24" r="4.5" fill="#d4af37"/>
+      </svg>
+      <svg class="corner-filigree cf-tr" viewBox="0 0 100 100" fill="none">
+        <path d="M6 94V24C6 14 14 6 24 6H94" stroke="#d4af37" stroke-width="2"/>
+        <path d="M16 74V28C16 21 21 16 28 16H74" stroke="#d90865" stroke-width="1.2"/>
+        <circle cx="24" cy="24" r="4.5" fill="#d4af37"/>
+      </svg>
+      <svg class="corner-filigree cf-bl" viewBox="0 0 100 100" fill="none">
+        <path d="M6 94V24C6 14 14 6 24 6H94" stroke="#d4af37" stroke-width="2"/>
+        <path d="M16 74V28C16 21 21 16 28 16H74" stroke="#d90865" stroke-width="1.2"/>
+        <circle cx="24" cy="24" r="4.5" fill="#d4af37"/>
+      </svg>
+      <svg class="corner-filigree cf-br" viewBox="0 0 100 100" fill="none">
+        <path d="M6 94V24C6 14 14 6 24 6H94" stroke="#d4af37" stroke-width="2"/>
+        <path d="M16 74V28C16 21 21 16 28 16H74" stroke="#d90865" stroke-width="1.2"/>
+        <circle cx="24" cy="24" r="4.5" fill="#d4af37"/>
+      </svg>
+
+      <div class="crown-pill-tag">✦ Sovereign Princess Day Edition • Exclusively For Nidhu ✦</div>
+
+      <div class="princess-day-script-banner">
+        Happy Princess Day to Beautiful Princess Nidhu
+      </div>
+
+      <!-- Bespoke Rose-Gold Tiara Emblem -->
+      <svg class="hero-tiara-svg" viewBox="0 0 220 115" fill="none">
+        <path d="M22 95L46 38L82 70L110 12L138 70L174 38L198 95H22Z" fill="rgba(255, 20, 129, 0.12)" stroke="#d4af37" stroke-width="2.8"/>
+        <path d="M38 95C65 62 155 62 182 95" stroke="#d90865" stroke-width="1.8"/>
+        <circle cx="110" cy="12" r="6" fill="#ff1481" stroke="#ffd700" stroke-width="2"/>
+        <circle cx="46" cy="38" r="5" fill="#ffd700"/>
+        <circle cx="174" cy="38" r="5" fill="#ffd700"/>
+        <circle cx="110" cy="56" r="7" fill="#d90865" stroke="#fff" stroke-width="1.5"/>
+      </svg>
+
+      <!-- Encrafted 3D Calligraphy Name -->
+      <div class="encrafted-name-stage">
+        <span class="encrafted-watermark">NIDHU</span>
+        <h1 class="encrafted-main-name">Nidhu</h1>
+      </div>
+
+      <div class="hero-editorial-subtitle">
+        ✦ Real-Life Barbie Princess • Sovereign of Intelligence, Dance &amp; Pure Cutiness ✦
+      </div>
+
+      <div class="hero-tagline-card">
+        <p class="hero-tagline-text" id="heroRotatingLine">
+          "Crowned in crystal filigree and draped in rose-pink tulle—she carries the timeless poise of twenty-two while guarding the radiant, mischievous soul of eighteen."
+        </p>
+      </div>
+
+      <div class="hero-badges-row">
+        <span class="couture-badge">👑 Real-Life Barbie Princess</span>
+        <span class="couture-badge">🌸 22 Poise • 18 Mastkhor Heart</span>
+        <span class="couture-badge">💎 Brilliant &amp; Capable</span>
+        <span class="couture-badge">💃 Prima of the Dance Floor</span>
+        <span class="couture-badge">💖 Forever Sister Bond</span>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
+        <button class="barbie-btn" onclick="showerRosePetals()">
+          ✨ Summon Royal Petal Cascade
+        </button>
+        <a href="#sec-shrine" class="barbie-btn soft-outline">
+          View Her Royal Portrait
+        </a>
+        <a href="#sec-brother" class="barbie-btn soft-outline">
+          💌 Read Brother's Forever Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KINETIC COUTURE MARQUEE RIBBON -->
+  <div class="couture-marquee">
+    <div class="marquee-track">
+      <div class="marquee-item">✦ HAPPY PRINCESS DAY TO MY BEAUTIFUL SISTER NIDHU ✦ ALWAYS LOOKING LIKE A BARBIE PRINCESS ✦ SO INTELLIGENT, CAPABLE &amp; LOVELY ✦ YEH RISHTA FOREVER KA HAI ✦</div>
+      <div class="marquee-item">✦ HAPPY PRINCESS DAY TO MY BEAUTIFUL SISTER NIDHU ✦ ALWAYS LOOKING LIKE A BARBIE PRINCESS ✦ SO INTELLIGENT, CAPABLE &amp; LOVELY ✦ YEH RISHTA FOREVER KA HAI ✦</div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION II: INTERACTIVE BARBIE CASTLE ("CLICK TO UNLOCK SURPRISES")
+       ========================================================================== -->
+  <section id="sec-castle" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section II • The Interactive Citadel</div>
+      <h2 class="royal-section-title">Click the Barbie Castle to Unlock Surprises</h2>
+      <p class="royal-section-sub">
+        Touch any of the six glowing golden orbs across Nidhu's royal Barbie Castle to reveal a hidden Princess Day surprise and collect all six crown jewels.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="castle-interactive-layout">
+        <div class="castle-stage-box">
+          <div style="font-family:'Cinzel Decorative',serif; font-size:0.72rem; font-weight:700; letter-spacing:2px; color:var(--barbie-hot); margin-bottom:8px;">
+            👇 Tap Any Glowing Golden Spire or Gate Below 👇
+          </div>
+
+          <svg class="interactive-castle-svg" viewBox="0 0 600 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="70" y="420" width="460" height="22" rx="10" fill="#8c0542"/>
+            <rect x="95" y="250" width="75" height="170" fill="#ff85c1" stroke="#d4af37" stroke-width="2.5"/>
+            <polygon points="85,250 132,165 180,250" fill="#d90865" stroke="#ffd700" stroke-width="2.5"/>
+            <rect x="430" y="250" width="75" height="170" fill="#ff85c1" stroke="#d4af37" stroke-width="2.5"/>
+            <polygon points="420,250 467,165 515,250" fill="#d90865" stroke="#ffd700" stroke-width="2.5"/>
+            <rect x="175" y="195" width="85" height="225" fill="#ff69b4" stroke="#d4af37" stroke-width="2.5"/>
+            <polygon points="165,195 217,100 270,195" fill="#b50656" stroke="#ffd700" stroke-width="2.5"/>
+            <rect x="340" y="195" width="85" height="225" fill="#ff69b4" stroke="#d4af37" stroke-width="2.5"/>
+            <polygon points="330,195 382,100 435,195" fill="#b50656" stroke="#ffd700" stroke-width="2.5"/>
+            <rect x="245" y="135" width="110" height="285" fill="#ff4da6" stroke="#ffd700" stroke-width="3"/>
+            <polygon points="232,135 300,25 368,135" fill="#8c0542" stroke="#ffd700" stroke-width="3"/>
+            <path d="M300 25V5L335 15L300 25Z" fill="#ffd700"/>
+            <path d="M217 100V82L244 91L217 100Z" fill="#ffd700"/>
+            <path d="M382 100V82L409 91L382 100Z" fill="#ffd700"/>
+
+            <!-- Chamber I -->
+            <g class="castle-hotspot" onclick="unlockCastleSurprise(0)">
+              <circle cx="300" cy="85" r="18" fill="#ffd700" stroke="#fff" stroke-width="3" class="hotspot-pulse"/>
+              <text x="300" y="90" text-anchor="middle" fill="#3d041e" font-size="12" font-weight="bold">I</text>
+            </g>
+            <!-- Chamber II -->
+            <g class="castle-hotspot" onclick="unlockCastleSurprise(1)">
+              <rect x="197" y="230" width="40" height="58" rx="20" fill="#fff0f7" stroke="#ffd700" stroke-width="3"/>
+              <circle cx="217" cy="259" r="15" fill="#d90865" stroke="#fff" stroke-width="2" class="hotspot-pulse"/>
+              <text x="217" y="264" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">II</text>
+            </g>
+            <!-- Chamber III -->
+            <g class="castle-hotspot" onclick="unlockCastleSurprise(2)">
+              <rect x="362" y="230" width="40" height="58" rx="20" fill="#fff0f7" stroke="#ffd700" stroke-width="3"/>
+              <circle cx="382" cy="259" r="15" fill="#d90865" stroke="#fff" stroke-width="2" class="hotspot-pulse"/>
+              <text x="382" y="264" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">III</text>
+            </g>
+            <!-- Chamber IV -->
+            <g class="castle-hotspot" onclick="unlockCastleSurprise(3)">
+              <circle cx="300" cy="205" r="28" fill="#fff0f7" stroke="#ffd700" stroke-width="3"/>
+              <circle cx="300" cy="205" r="16" fill="#8c0542" stroke="#fff" stroke-width="2" class="hotspot-pulse"/>
+              <text x="300" y="210" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">IV</text>
+            </g>
+            <!-- Chamber V -->
+            <g class="castle-hotspot" onclick="unlockCastleSurprise(4)">
+              <circle cx="132" cy="320" r="16" fill="#ffd700" stroke="#fff" stroke-width="2.5" class="hotspot-pulse"/>
+              <text x="132" y="325" text-anchor="middle" fill="#3d041e" font-size="11" font-weight="bold">V</text>
+            </g>
+            <!-- Chamber VI -->
+            <g class="castle-hotspot" onclick="unlockCastleSurprise(5)">
+              <path d="M262 420V335C262 312 338 312 338 335V420H262Z" fill="#ffd700" stroke="#fff" stroke-width="3"/>
+              <circle cx="300" cy="368" r="17" fill="#8c0542" stroke="#fff" stroke-width="2.5" class="hotspot-pulse"/>
+              <text x="300" y="373" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">VI</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="castle-surprise-card">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+              <span class="wing-tag" style="margin-bottom:0;" id="castleRoomTag">CHAMBER I • THE CROWN SPIRE</span>
+              <span style="font-family:'Cinzel Decorative',serif; font-size:0.74rem; font-weight:700; color:var(--barbie-hot);" id="castleUnlockCounter">1 / 6 Royal Chambers</span>
+            </div>
+
+            <div class="gem-progress-bar">
+              <div class="gem-progress-fill" id="castleProgressFill"></div>
+            </div>
+
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:2.1rem; color:var(--plum-ink); margin-bottom:14px;" id="castleSurpriseTitle">
+              The Sovereign Crystal Tiara
+            </h3>
+
+            <p style="font-family:'Cormorant Garamond',serif; font-size:1.32rem; font-style:italic; line-height:1.62; color:var(--plum-soft); background:#fff5fa; padding:24px; border-radius:20px; border:1px solid var(--border-pink);" id="castleSurpriseBody">
+              "Surprise #1: Most crowns belong only to storybooks, yet Nidhu wears her crystal-set tiara in the real world with a natural grace and luminous warmth that outshines every jewel in the palace."
+            </p>
+          </div>
+
+          <div>
+            <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.4px; color:var(--plum-soft); margin-top:20px;">
+              Direct Chamber Access:
+            </div>
+            <div class="castle-progress-pills" id="castleButtonsWrap">
+              <button class="tower-key-btn unlocked" onclick="unlockCastleSurprise(0)">I. Tiara Spire</button>
+              <button class="tower-key-btn" onclick="unlockCastleSurprise(1)">II. Mastkhor Wing</button>
+              <button class="tower-key-btn" onclick="unlockCastleSurprise(2)">III. Ballroom</button>
+              <button class="tower-key-btn" onclick="unlockCastleSurprise(3)">IV. Rose Balcony</button>
+              <button class="tower-key-btn" onclick="unlockCastleSurprise(4)">V. Intelligence</button>
+              <button class="tower-key-btn" onclick="unlockCastleSurprise(5)">VI. Forever Bond</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION III: THE SOVEREIGN PORTRAIT SANCTUARY (SINGLE MASTERPIECE FRAME)
+       ========================================================================== -->
+  <section id="sec-shrine" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section III • The Singular Masterpiece</div>
+      <h2 class="royal-section-title">The Sovereign Portrait of Princess Nidhu</h2>
+      <p class="royal-section-sub">
+        One irreplaceable princess deserves one monumental couture frame—surrounded by six poetic tributes celebrating her rose-pink tulle gown, crystal tiara, and radiant smile.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="shrine-showcase-wrapper">
+        <!-- Left 3 Editorial Quote Callouts -->
+        <div class="floating-quote-column">
+          <div class="shrine-quote-wing">
+            <span class="wing-tag">✦ I • The Crystal Diadem</span>
+            <p class="wing-quote-text">"Crowned in rose-gold and crystal light, yet it is the unmistakable kindness in her eyes that defines her royalty."</p>
+          </div>
+          <div class="shrine-quote-wing">
+            <span class="wing-tag">✦ II • The Couture Tulle Gown</span>
+            <p class="wing-quote-text">"Cascading tiers of blush and magenta organza—turning stone courtyard steps into a grand fairytale palace."</p>
+          </div>
+          <div class="shrine-quote-wing">
+            <span class="wing-tag">✦ III • XXII Poise, XVIII Heart</span>
+            <p class="wing-quote-text">"Dressed with the regal composure of twenty-two, while guarding the playful, mischievous spark of eighteen."</p>
+          </div>
+        </div>
+
+        <!-- CENTER: THE SINGLE MONUMENTAL PORTRAIT HOLDER -->
+        <div class="masterpiece-frame-monument" id="singleMonumentFrame">
+          <svg class="frame-top-crown-crest" viewBox="0 0 120 70" fill="none">
+            <path d="M10 60L25 20L48 42L60 8L72 42L95 20L110 60H10Z" fill="#ffd700" stroke="#8c0542" stroke-width="3"/>
+            <circle cx="60" cy="8" r="5" fill="#ff1481"/>
+          </svg>
+
+          <div class="single-portrait-viewport" onclick="triggerSinglePhotoLoad()" title="Click to select or reload Princess Nidhu's Portrait">
+            <img
+              id="masterpiecePortraitImg"
+              src="1000153305.png"
+              alt="Happy Princess Day to beautiful princess Nidhu"
+              onerror="handlePortraitFallback(this)"
+            />
+            <div class="portrait-magic-overlay" id="portraitMagicOverlay"></div>
+
+            <!-- Graceful Fallback if Local Browser Requires Click -->
+            <div class="portrait-fallback-overlay" id="portraitFallbackOverlay">
+              <div style="font-family:'Great Vibes',cursive; font-size:2.5rem; color:var(--barbie-hot); margin-bottom:8px;">
+                Happy Princess Day, Nidhu
+              </div>
+              <p style="font-family:'Cormorant Garamond',serif; font-size:1.18rem; color:var(--plum-ink); margin-bottom:18px; line-height:1.5;">
+                Tap below to select her <strong>Rose-Pink Ballgown &amp; Tiara Portrait</strong> from your gallery into this Sovereign Frame!
+              </p>
+              <span class="barbie-btn" style="padding:11px 24px; font-size:0.76rem;">
+                👑 Select Princess Nidhu's Photo
+              </span>
+            </div>
+          </div>
+
+          <div class="portrait-engraved-plaque">
+            <div class="plaque-script-title">Happy Princess Day to Beautiful Princess Nidhu</div>
+            <div class="plaque-sub">✦ Always Looking Like a Real-Life Barbie Princess ✦</div>
+          </div>
+
+          <input type="file" id="singlePortraitInput" accept="image/*" hidden onchange="loadSingleMasterpiece(event)" />
+        </div>
+
+        <!-- Right 3 Editorial Quote Callouts -->
+        <div class="floating-quote-column">
+          <div class="shrine-quote-wing">
+            <span class="wing-tag">✦ IV • The Over-The-Shoulder Glance</span>
+            <p class="wing-quote-text">"A single look back over her shoulder—effortless, luminous, and captivating enough to quiet the entire garden."</p>
+          </div>
+          <div class="shrine-quote-wing">
+            <span class="wing-tag">✦ V • Beauty &amp; Brilliance</span>
+            <p class="wing-quote-text">"Too cute, too lovely, and blessed with an intelligent mind capable of achieving anything she dreams."</p>
+          </div>
+          <div class="shrine-quote-wing">
+            <span class="wing-tag">✦ VI • Singular Masterpiece</span>
+            <p class="wing-quote-text">"One frame is all that is ever needed when the portrait within it holds the most radiant sister and princess."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Portrait Lighting & Frame Finish Console -->
+      <div class="aura-lighting-bar">
+        <div>
+          <label style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--barbie-hot);">
+            ✦ Portrait Rose-Gold Brilliance
+          </label>
+          <input type="range" min="90" max="125" value="104" class="barbie-range" style="margin:8px 0 0;" oninput="adjustPortraitAura()" id="auraBrightness" />
+        </div>
+        <div>
+          <label style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--barbie-hot);">
+            ✦ Couture Velvet Contrast
+          </label>
+          <input type="range" min="90" max="125" value="105" class="barbie-range" style="margin:8px 0 0;" oninput="adjustPortraitAura()" id="auraContrast" />
+        </div>
+        <div style="display:flex; align-items:center; justify-content:center; gap:8px; flex-wrap:wrap;">
+          <button class="barbie-btn soft-outline" style="padding:9px 15px; font-size:0.72rem;" onclick="setMonumentFinish('gold')">24K Gold</button>
+          <button class="barbie-btn soft-outline" style="padding:9px 15px; font-size:0.72rem;" onclick="setMonumentFinish('finish-rose')">Barbie Rose</button>
+          <button class="barbie-btn soft-outline" style="padding:9px 15px; font-size:0.72rem;" onclick="setMonumentFinish('finish-platinum')">Platinum</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION IV: "LIVING BARBIE" COUTURE ANATOMY LOOKBOOK
+       ========================================================================== -->
+  <section id="sec-lookbook" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section IV • The Couture Study</div>
+      <h2 class="royal-section-title">Why Nidhu Always Looks Like a Barbie Princess</h2>
+      <p class="royal-section-sub">
+        Select each couture element from her Princess Day portrait to explore how every detail converges into living fairytale elegance.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="lookbook-grid">
+        <div class="lookbook-feature-card active-look" onclick="selectLookbookDetail(0, this)">
+          <span class="wing-tag">ELEMENT I</span>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.55rem; margin-bottom:8px;">The Crystal Rose Tiara</h3>
+          <p style="font-size:0.88rem; color:var(--plum-soft); line-height:1.55;">Ornate rose-gold peaks encrusted with brilliant crystals, resting naturally atop her dark flowing waves.</p>
+        </div>
+
+        <div class="lookbook-feature-card" onclick="selectLookbookDetail(1, this)">
+          <span class="wing-tag">ELEMENT II</span>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.55rem; margin-bottom:8px;">Sequin &amp; Layered Pink Tulle</h3>
+          <p style="font-size:0.88rem; color:var(--plum-soft); line-height:1.55;">Geometric sequin craftsmanship cascading into multi-tiered waves of blush and deep magenta tulle.</p>
+        </div>
+
+        <div class="lookbook-feature-card" onclick="selectLookbookDetail(2, this)">
+          <span class="wing-tag">ELEMENT III</span>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.55rem; margin-bottom:8px;">The Fountain Promenade</h3>
+          <p style="font-size:0.88rem; color:var(--plum-soft); line-height:1.55;">Framed by towering evergreens and a rising water fountain that mirrors her luminous energy.</p>
+        </div>
+
+        <div class="lookbook-feature-card" onclick="selectLookbookDetail(3, this)">
+          <span class="wing-tag">ELEMENT IV</span>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.55rem; margin-bottom:8px;">Unmatched Cutiness &amp; Grace</h3>
+          <p style="font-size:0.88rem; color:var(--plum-soft); line-height:1.55;">Her signature over-the-shoulder smile—blending royal grace with playful eighteen-year-old charm.</p>
+        </div>
+      </div>
+
+      <div class="lookbook-Spotlight-banner" id="lookbookSpotlight">
+        <div style="font-family:'Cinzel Decorative',serif; font-size:0.74rem; letter-spacing:2.5px; color:#ffe699; margin-bottom:8px;" id="lookbookSpotlightTag">
+          COUTURE ANNOTATION • THE CRYSTAL ROSE TIARA
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-style:italic; line-height:1.5;" id="lookbookSpotlightText">
+          "A crown is merely metalwork until it is worn by someone whose spirit is genuinely royal—and on Nidhu, every crystal finds its true purpose."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION V: THE "XXII GOING ON XVIII" EDITORIAL DOSSIER
+       ========================================================================== -->
+  <section id="sec-calibrator" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section V • The Character Paradox</div>
+      <h2 class="royal-section-title">Twenty-Two in Grace, Eighteen in Spirit</h2>
+      <p class="royal-section-sub">
+        The rarest quality of Nidhu's charm is her effortless duality: an intelligent, capable young woman of twenty-two who has kept every ounce of her playful eighteen-year-old heart.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="calibrator-layout">
+        <div class="stat-quad-grid">
+          <div class="stat-pink-box">
+            <div class="stat-big-num">XXII</div>
+            <div style="font-weight:700; font-size:0.76rem; letter-spacing:1.2px; text-transform:uppercase; color:var(--plum-ink); margin-bottom:6px;">Sovereign Poise</div>
+            <p style="font-size:0.86rem; color:var(--plum-soft); line-height:1.5;">Intelligent, capable of achieving anything, and carrying herself with royal elegance.</p>
+          </div>
+          <div class="stat-pink-box">
+            <div class="stat-big-num">XVIII</div>
+            <div style="font-weight:700; font-size:0.76rem; letter-spacing:1.2px; text-transform:uppercase; color:var(--plum-ink); margin-bottom:6px;">Youthful Wonder</div>
+            <p style="font-size:0.86rem; color:var(--plum-soft); line-height:1.5;">Spontaneous small-girl excitement, expressive pouts, and unguarded joy.</p>
+          </div>
+          <div class="stat-pink-box">
+            <div class="stat-big-num">100%</div>
+            <div style="font-weight:700; font-size:0.76rem; letter-spacing:1.2px; text-transform:uppercase; color:var(--plum-ink); margin-bottom:6px;">Mastkhor Wit</div>
+            <p style="font-size:0.86rem; color:var(--plum-soft); line-height:1.5;">Quick with playful banter, adorable mischief, and an unbeatable innocent smile.</p>
+          </div>
+          <div class="stat-pink-box">
+            <div class="stat-big-num">∞</div>
+            <div style="font-weight:700; font-size:0.76rem; letter-spacing:1.2px; text-transform:uppercase; color:var(--plum-ink); margin-bottom:6px;">Cutiness &amp; Dance</div>
+            <p style="font-size:0.86rem; color:var(--plum-soft); line-height:1.5;">Too cute, too lovely, and turning every melody into heartfelt choreography.</p>
+          </div>
+        </div>
+
+        <div style="background:#fff5fa; border:1.5px solid var(--border-gold); border-radius:26px; padding:32px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <span class="wing-tag">INTERACTIVE NIDHUNESS HARMONIZER</span>
+            <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:10px;">
+              Calibrate Her Royal vs. Mastkhor Aura
+            </h3>
+            <p style="font-size:0.9rem; color:var(--plum-soft); line-height:1.55;">
+              Slide across the spectrum to observe how her composed twenty-two-year-old brilliance blends with her spirited eighteen-year-old mischief.
+            </p>
+            <input type="range" min="0" max="100" value="84" class="barbie-range" oninput="updateNidhuSlider(this.value)" />
+            <div style="display:flex; justify-content:space-between; font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--barbie-hot);">
+              <span>0% • Regal Poise (22)</span>
+              <span id="nidhuSliderLabel">84% Spirited Mastkhor</span>
+              <span>100% • Playful Youth (18)</span>
+            </div>
+          </div>
+
+          <div style="background:#fff; padding:20px; border-radius:18px; border:1px solid var(--border-pink); margin-top:18px;">
+            <p id="nidhuSliderOutput" style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-style:italic; color:var(--plum-ink); line-height:1.5;">
+              "At 84% Resonance: Dressed like a sovereign princess in rose-pink tulle, yet within seconds she is flashing a mischievous grin and filling the room with laughter."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION VI: PRINCESS DAY GRAND BALLROOM & STARLIGHT DANCE CONSERVATORY
+       ========================================================================== -->
+  <section id="sec-dance" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section VI • Today's Princess Day Royal Gala</div>
+      <h2 class="royal-section-title">Nidhu's Starlight Dance Conservatory</h2>
+      <p class="royal-section-sub">
+        Dedicated to the art she loves most on her special day. Command the Princess Day Ballroom spotlight, follow the live 8-count choreography cues tailored to her pink ballgown, and compose a live melody on the harmonic sequencer.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="dance-ballroom-layout">
+        <div class="ballroom-stage-console" id="ballroomStageBox">
+          <div class="stage-spotlight-cone" id="stageSpotlightCone"></div>
+
+          <div style="position:relative; z-index:2;">
+            <div style="font-family:'Cinzel Decorative',serif; font-size:0.72rem; letter-spacing:2px; color:#ffe699; margin-bottom:4px;">
+              ✦ PRINCESS DAY GALA STAGE ✦
+            </div>
+            <div style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-style:italic; color:#fff;" id="danceModeTitle">
+              Suite I • The Pink Ballgown Royal Waltz
+            </div>
+          </div>
+
+          <div class="vinyl-record" id="vinylRecord">
+            <div class="vinyl-center-rose">
+              <span>NIDHU</span>
+              <span style="font-size:0.48rem; letter-spacing:1px;">PRIMA EDITION</span>
+            </div>
+          </div>
+
+          <canvas id="danceWaveCanvas" width="420" height="92"></canvas>
+
+          <div style="position:relative; z-index:2; margin-top:14px;">
+            <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1.5px; color:#ffe699; margin-bottom:8px;">
+              Stage Spotlight Atmosphere:
+            </div>
+            <div style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
+              <button class="barbie-btn" style="padding:7px 14px; font-size:0.68rem;" onclick="setStageSpotlight('rose')">Barbie Rose</button>
+              <button class="barbie-btn" style="padding:7px 14px; font-size:0.68rem; background:linear-gradient(135deg,#d4af37,#9c7a1c);" onclick="setStageSpotlight('gold')">24K Gold</button>
+              <button class="barbie-btn" style="padding:7px 14px; font-size:0.68rem; background:linear-gradient(135deg,#8e24aa,#4a148c);" onclick="setStageSpotlight('velvet')">Royal Velvet</button>
+            </div>
+          </div>
+
+          <button class="barbie-btn" id="dancePlayBtn" style="margin-top:16px; width:100%; position:relative; z-index:2;" onclick="toggleDanceSequencer()">
+            ▶ Launch Princess Day 8-Count Gala Beat
+          </button>
+        </div>
+
+        <div>
+          <span class="wing-tag">INTERACTIVE CHOREOGRAPHY &amp; RHYTHM DECK</span>
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size:2.05rem; margin-bottom:8px;">
+            Princess Day Choreography Suites
+          </h3>
+          <p style="font-size:0.9rem; color:var(--plum-soft); margin-bottom:16px; line-height:1.55;">
+            Select one of four signature Princess Day dance styles below to load its tempo, harmonic pattern, and live 8-count stage directions:
+          </p>
+
+          <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin-bottom:16px;">
+            <button class="barbie-btn soft-outline active-pill" style="padding:11px; font-size:0.72rem;" onclick="switchDancePreset(0, 'Suite I • The Pink Ballgown Royal Waltz', 122, this)">
+              I. Pink Ballgown Waltz
+            </button>
+            <button class="barbie-btn soft-outline" style="padding:11px; font-size:0.72rem;" onclick="switchDancePreset(1, 'Suite II • Bollywood Mastkhor Princess Groove', 132, this)">
+              II. Bollywood Mastkhor
+            </button>
+            <button class="barbie-btn soft-outline" style="padding:11px; font-size:0.72rem;" onclick="switchDancePreset(2, 'Suite III • Classical Abhinaya & Grace', 98, this)">
+              III. Classical Abhinaya
+            </button>
+            <button class="barbie-btn soft-outline" style="padding:11px; font-size:0.72rem;" onclick="switchDancePreset(3, 'Suite IV • Starlight Tiara Freestyle', 118, this)">
+              IV. Tiara Freestyle Spin
+            </button>
+          </div>
+
+          <div class="choreo-cue-banner">
+            <div style="display:flex; justify-content:space-between; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--barbie-hot); margin-bottom:4px;">
+              <span id="liveCountStepLabel">COUNT 01 • STAGE DIRECTION</span>
+              <span>Grace &amp; Expression Index: 100%</span>
+            </div>
+            <p style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-style:italic; font-weight:700; color:var(--plum-ink);" id="liveChoreoInstruction">
+              "Step 1: Graceful over-the-shoulder glance by the fountain, letting the crystal tiara catch the spotlight."
+            </p>
+          </div>
+
+          <div class="eight-count-row" id="countBoxesRow">
+            <div class="count-box active-beat">1</div>
+            <div class="count-box">2</div>
+            <div class="count-box">3</div>
+            <div class="count-box">4</div>
+            <div class="count-box">5</div>
+            <div class="count-box">6</div>
+            <div class="count-box">7</div>
+            <div class="count-box">8</div>
+          </div>
+
+          <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:var(--plum-soft); letter-spacing:1.2px; margin-top:14px;">
+            Harmonic Harp Sequencer (Click Notes to Customize Melody):
+          </div>
+          <div class="seq-grid">
+            <div class="seq-note-btn armed" onclick="toggleSeqNote(this, 0)">Glance</div>
+            <div class="seq-note-btn" onclick="toggleSeqNote(this, 1)">Sway</div>
+            <div class="seq-note-btn armed" onclick="toggleSeqNote(this, 2)">Twirl</div>
+            <div class="seq-note-btn armed" onclick="toggleSeqNote(this, 3)">Spin</div>
+            <div class="seq-note-btn armed" onclick="toggleSeqNote(this, 4)">Grace</div>
+            <div class="seq-note-btn" onclick="toggleSeqNote(this, 5)">Leap</div>
+            <div class="seq-note-btn armed" onclick="toggleSeqNote(this, 6)">Sparkle</div>
+            <div class="seq-note-btn armed" onclick="toggleSeqNote(this, 7)">Crown Pose</div>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:14px;">
+            <span style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--plum-soft); white-space:nowrap;">
+              Rhythm Tempo: <strong id="bpmDisplay" style="color:var(--barbie-hot);">122 BPM</strong>
+            </span>
+            <input type="range" min="80" max="156" value="122" class="barbie-range" style="margin:0;" oninput="updateDanceTempo(this.value)" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION VII: THE ROYAL TIARA & JEWEL ATELIER
+       ========================================================================== -->
+  <section id="sec-jewels" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section VII • The Crown Jeweler's Vault</div>
+      <h2 class="royal-section-title">The Five Sovereign Gems of Her Tiara</h2>
+      <p class="royal-section-sub">
+        Every jewel set into Nidhu's Princess Day crown represents a rare facet of her brilliance. Touch each gemstone below to illuminate its tribute.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="jewel-atelier-grid">
+        <div class="gemstone-card active-gem" onclick="selectTiaraGem(0, this)">
+          <svg class="gem-svg-icon" viewBox="0 0 64 64" fill="none">
+            <polygon points="32,6 56,24 46,56 18,56 8,24" fill="#ff1481" stroke="#ffd700" stroke-width="2.5"/>
+          </svg>
+          <span class="wing-tag">GEM I • RUBY ROSE</span>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem;">Unmatched Cutiness</h4>
+        </div>
+
+        <div class="gemstone-card" onclick="selectTiaraGem(1, this)">
+          <svg class="gem-svg-icon" viewBox="0 0 64 64" fill="none">
+            <polygon points="32,6 54,32 32,58 10,32" fill="#ff85c1" stroke="#ffd700" stroke-width="2.5"/>
+          </svg>
+          <span class="wing-tag">GEM II • PINK DIAMOND</span>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem;">Brilliant Intelligence</h4>
+        </div>
+
+        <div class="gemstone-card" onclick="selectTiaraGem(2, this)">
+          <svg class="gem-svg-icon" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="22" fill="#ffe699" stroke="#d4af37" stroke-width="2.5"/>
+          </svg>
+          <span class="wing-tag">GEM III • IMPERIAL PEARL</span>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem;">Capable of Anything</h4>
+        </div>
+
+        <div class="gemstone-card" onclick="selectTiaraGem(3, this)">
+          <svg class="gem-svg-icon" viewBox="0 0 64 64" fill="none">
+            <polygon points="18,10 46,10 58,32 46,54 18,54 6,32" fill="#e040fb" stroke="#ffd700" stroke-width="2.5"/>
+          </svg>
+          <span class="wing-tag">GEM IV • AMETHYST SPARK</span>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem;">The Dancer's Soul</h4>
+        </div>
+
+        <div class="gemstone-card" onclick="selectTiaraGem(4, this)">
+          <svg class="gem-svg-icon" viewBox="0 0 64 64" fill="none">
+            <polygon points="32,8 40,24 58,26 44,39 48,56 32,47 16,56 20,39 6,26 24,24" fill="#ffd700" stroke="#d90865" stroke-width="2"/>
+          </svg>
+          <span class="wing-tag">GEM V • GOLDEN CITRINE</span>
+          <h4 style="font-family:'Cormorant Garamond',serif; font-size:1.35rem;">Forever Rishta</h4>
+        </div>
+      </div>
+
+      <div class="lookbook-Spotlight-banner" style="margin-top:10px;">
+        <div style="font-family:'Cinzel Decorative',serif; font-size:0.74rem; letter-spacing:2.5px; color:#ffe699; margin-bottom:8px;" id="gemTitleBanner">
+          GEMSTONE INSCRIPTION • THE RUBY ROSE OF UNMATCHED CUTINESS
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:1.45rem; font-style:italic; line-height:1.5;" id="gemBodyBanner">
+          "Set at the very center of her crown, this jewel reflects a sister who is too cute, too lovely, and always shining like a real-life Barbie Princess."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION VIII: THE VELVET ANTHOLOGY (QUOTE VAULT)
+       ========================================================================== -->
+  <section id="sec-quotes" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section VIII • The Literary Archive</div>
+      <h2 class="royal-section-title">The Velvet Anthology of Nidhuness</h2>
+      <p class="royal-section-sub">
+        Curated verses celebrating her beauty, her intelligence, her playful eighteen-year-old small-girl spirit, and the rhythm that moves her soul.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-bottom:28px;">
+        <button class="barbie-btn soft-outline active-pill" style="padding:9px 20px; font-size:0.74rem;" onclick="filterQuotesVault('all', this)">All Verses</button>
+        <button class="barbie-btn soft-outline" style="padding:9px 20px; font-size:0.74rem;" onclick="filterQuotesVault('princess', this)">Barbie Princess</button>
+        <button class="barbie-btn soft-outline" style="padding:9px 20px; font-size:0.74rem;" onclick="filterQuotesVault('mastkhor', this)">Mastkhor &amp; Youth</button>
+        <button class="barbie-btn soft-outline" style="padding:9px 20px; font-size:0.74rem;" onclick="filterQuotesVault('dance', this)">Dance &amp; Brilliance</button>
+      </div>
+
+      <div class="quotes-masonry" id="quotesVaultGrid">
+        <div class="pink-quote-card" data-qcat="princess">
+          <span class="wing-tag">✦ VERSE I • LIVING BARBIE</span>
+          <p class="wing-quote-text" style="margin:10px 0 18px;">"Draped in rose-pink tulle and crowned with crystal light, she does not merely resemble a Barbie princess—she redefines what royalty looks like."</p>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">ARCHIVE OF PRINCESS DAY</span>
+        </div>
+
+        <div class="pink-quote-card" data-qcat="mastkhor">
+          <span class="wing-tag">✦ VERSE II • THE AGE PARADOX</span>
+          <p class="wing-quote-text" style="margin:10px 0 18px;">"Her calendar counts twenty-two years, yet her spontaneous pranks, expressive pouts, and bubbly laughter belong forever to a carefree eighteen-year-old girl."</p>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">SIGNATURE NIDHUNESS</span>
+        </div>
+
+        <div class="pink-quote-card" data-qcat="dance">
+          <span class="wing-tag">✦ VERSE III • INTELLIGENCE &amp; CAPABILITY</span>
+          <p class="wing-quote-text" style="margin:10px 0 18px;">"Beneath her adorable cutiness lives a fiercely intelligent mind—a girl who is truly capable of achieving anything she sets her heart upon."</p>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">UNSTOPPABLE BRILLIANCE</span>
+        </div>
+
+        <div class="pink-quote-card" data-qcat="mastkhor">
+          <span class="wing-tag">✦ VERSE IV • SPIRITED CHARM</span>
+          <p class="wing-quote-text" style="margin:10px 0 18px;">"Half serene angel, half irrepressible mastkhor whirlwind—the only soul who can orchestrate playful mischief and disarm the entire room with one innocent smile."</p>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">UNDEFEATED CUTIE</span>
+        </div>
+
+        <div class="pink-quote-card" data-qcat="princess">
+          <span class="wing-tag">✦ VERSE V • THE FOUNTAIN COURT</span>
+          <p class="wing-quote-text" style="margin:10px 0 18px;">"Even the tall garden fountain rising behind her seems to pause in admiration when she turns back over her shoulder to smile."</p>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">ROYAL PORTRAIT SERIES</span>
+        </div>
+
+        <div class="pink-quote-card" data-qcat="dance">
+          <span class="wing-tag">✦ VERSE VI • POETRY IN MOTION</span>
+          <p class="wing-quote-text" style="margin:10px 0 18px;">"When Nidhu begins to dance, rhythm ceases to be sound and becomes visible starlight across the stage."</p>
+          <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">PRIMA BALLERINA</span>
+        </div>
+      </div>
+
+      <div style="text-align:center;">
+        <button class="barbie-btn" onclick="addSecretPrincessQuote()">
+          ✦ Inscribe New Verse Into The Anthology
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION IX: THE ENCHANTED SPECULUM (ROYAL VANITY MIRROR)
+       ========================================================================== -->
+  <section id="sec-mirror" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section IX • Speculum Reginae</div>
+      <h2 class="royal-section-title">The Mirror of Sovereign Truths</h2>
+      <p class="royal-section-sub">
+        Touch the gilded rose-gold speculum to awaken a harmonic harp chord and reveal a reflection on her grace and intelligence.
+      </p>
+    </div>
+
+    <div class="couture-glass-card" style="text-align:center;">
+      <div class="vanity-mirror-oval" onclick="askBarbieMirror()">
+        <div class="vanity-mirror-surface">
+          <span class="wing-tag">✦ ROYAL SPECULUM ✦</span>
+          <p style="font-family:'Cormorant Garamond',serif; font-size:1.38rem; font-style:italic; font-weight:600; color:var(--plum-ink); margin:16px 0; line-height:1.5;" id="vanityMirrorQuote">
+            "In her rose-pink ballgown and crystal tiara, she is the living standard of Barbie elegance, intelligence, and the sweetest heartbeat in every room."
+          </p>
+          <span style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:1.8px; color:var(--barbie-hot);">
+            ✦ Touch Glass to Awaken Reflection ✦
+          </span>
+        </div>
+      </div>
+
+      <button class="barbie-btn" onclick="askBarbieMirror()">
+        ✦ Consult The Sovereign Mirror
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION X: 3D DUALITY REVOLVING PANELS
+       ========================================================================== -->
+  <section id="sec-duality" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section X • The Two Crowns</div>
+      <h2 class="royal-section-title">Sovereign Lady vs. Spirited Kid</h2>
+      <p class="royal-section-sub">
+        Hover or touch each architectural panel to revolve between her composed twenty-two-year-old portrait and her candid eighteen-year-old *mastkhor* reality.
+      </p>
+    </div>
+
+    <div class="flip-cards-row">
+      <div class="duality-flip-box" onclick="this.classList.toggle('flipped')">
+        <div class="duality-flip-inner">
+          <div class="flip-side flip-side-front">
+            <span class="wing-tag">FACET I • THE PORTRAIT (AGE XXII)</span>
+            <div>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:8px;">The Serene Aristocrat</h3>
+              <p style="color:var(--plum-soft); font-size:0.95rem; line-height:1.6;">Draped in layered rose tulle and crowned in crystal, appearing every bit the composed, regal twenty-two-year-old empress.</p>
+            </div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--barbie-hot);">↻ Revolve Panel</span>
+          </div>
+          <div class="flip-side flip-side-back">
+            <span class="wing-tag" style="color:#ffe699;">FACET I • THE REALITY (AGE XVIII AT HEART)</span>
+            <div>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:8px;">The Chief Mastkhor</h3>
+              <p style="font-size:0.95rem; line-height:1.6;">Unleashes spontaneous teasing, hilarious stories, and adorable small-girl mischief the very second the camera stops clicking.</p>
+            </div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:#ffe699;">✦ Authentic Nidhuness</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="duality-flip-box" onclick="this.classList.toggle('flipped')">
+        <div class="duality-flip-inner">
+          <div class="flip-side flip-side-front">
+            <span class="wing-tag">FACET II • THE EXPECTATION</span>
+            <div>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:8px;">The Quiet Spectator</h3>
+              <p style="color:var(--plum-soft); font-size:0.95rem; line-height:1.6;">When a rhythm begins to play across the hall, one might assume she will simply listen quietly from her seat.</p>
+            </div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--barbie-hot);">↻ Revolve Panel</span>
+          </div>
+          <div class="flip-side flip-side-back">
+            <span class="wing-tag" style="color:#ffe699;">FACET II • THE STAGE REALITY</span>
+            <div>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:8px;">The Instant Prima</h3>
+              <p style="font-size:0.95rem; line-height:1.6;">Her eyes ignite immediately, translating every beat into expressive choreography and effortless grace.</p>
+            </div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:#ffe699;">✦ Born for the Spotlight</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="duality-flip-box" onclick="this.classList.toggle('flipped')">
+        <div class="duality-flip-inner">
+          <div class="flip-side flip-side-front">
+            <span class="wing-tag">FACET III • WHEN CAUGHT IN MISCHIEF</span>
+            <div>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:8px;">The Formal Apology</h3>
+              <p style="color:var(--plum-soft); font-size:0.95rem; line-height:1.6;">When discovered behind a playful prank, one expects a solemn, grown-up explanation.</p>
+            </div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--barbie-hot);">↻ Revolve Panel</span>
+          </div>
+          <div class="flip-side flip-side-back">
+            <span class="wing-tag" style="color:#ffe699;">FACET III • THE UNBEATABLE DEFENSE</span>
+            <div>
+              <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.95rem; margin-bottom:8px;">One Innocent Smile</h3>
+              <p style="font-size:0.95rem; line-height:1.6;">Flashes a single disarming small-girl grin that melts every argument in under two seconds flat.</p>
+            </div>
+            <span style="font-size:0.72rem; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:#ffe699;">✦ Undefeated Sovereign</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION XI: PRINCESS DAY SKY LANTERN WISH SANCTUARY
+       ========================================================================== -->
+  <section id="sec-lanterns" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section XI • The Starlight Wish Sanctuary</div>
+      <h2 class="royal-section-title">Release a Royal Princess Day Lantern</h2>
+      <p class="royal-section-sub">
+        Touch anywhere across the twilight palace sky below to launch glowing rose-gold lanterns carrying blessings for Nidhu's dreams, dance stages, and endless happiness.
+      </p>
+    </div>
+
+    <div class="couture-glass-card">
+      <div class="lantern-sanctuary-stage" onclick="launchWishLantern(event)">
+        <canvas id="lanternCanvas"></canvas>
+        <div class="lantern-overlay-caption" id="lanternWishText">
+          "✨ Touch the sky to release a glowing Princess Day wish lantern for Nidhu ✨"
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+        <button class="barbie-btn" onclick="releaseLanternFlotilla()">
+          🏮 Release Grand Flotilla of Royal Wishes
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION XII: FROM YOUR BROTHER (MOMOS) TO MY BEAUTIFUL SISTER NIDHU
+       ========================================================================== -->
+  <section id="sec-brother" class="reveal-on-scroll">
+    <div class="section-header">
+      <div class="crown-pill-tag">Section XII • From Your Brother's Heart</div>
+      <h2 class="royal-section-title">To My Beautiful Sister, Princess Nidhu</h2>
+      <p class="royal-section-sub">
+        A heartfelt Princess Day dedication from your brother—celebrating who you are, everything you are capable of, and a bond that is meant for eternity.
+      </p>
+    </div>
+
+    <div class="brother-tribute-monument">
+      <div class="wax-seal-crest" onclick="grandRoyalFinale()" title="Tap Royal Wax Seal">
+        N
+      </div>
+
+      <div style="text-align:center; margin-bottom:24px;">
+        <span class="wing-tag">A BROTHER'S ROYAL DEDICATION • HAPPY PRINCESS DAY</span>
+        <h3 style="font-family:'Great Vibes',cursive; font-size:clamp(2.4rem, 5vw, 3.3rem); color:var(--barbie-hot);">
+          To My Dearest Sister, Princess Nidhu 💖
+        </h3>
+      </div>
+
+      <div class="brother-letter-body">
+        <p style="margin-bottom:18px;">
+          <strong>My Beautiful Sister Nidhu,</strong>
+        </p>
+
+        <p style="margin-bottom:18px;">
+          Today is <strong>Princess Day</strong>—and honestly, today is completely <em>your</em> day because you truly are a real-life princess in every sense of the word. Happy Princess Day to my beautiful sister! Whether in your gorgeous rose-pink ballgown and crystal tiara or in everyday life, you are always looking just like a <strong>Barbie Princess</strong>—overflowing with so much beauty, cutiness, and effortless grace.
+        </p>
+
+        <p style="margin-bottom:20px;">
+          Nidhu, honestly I am telling you from the bottom of my heart: <strong>you are so intelligent, and you are so much capable of doing anything in this world.</strong> Never doubt your brilliance or your strength for a single second. Just as you are too cute, too beautiful, and too lovely, your mind and your spirit are unstoppable, and I know you will achieve every single dream you set your eyes upon.
+        </p>
+
+        <!-- HIGHLIGHTED FOREVER RISHTA PROMISE BOX -->
+        <div class="forever-rishta-highlight">
+          <div class="rishta-badge-top">✦ MY FOREVER PROMISE &amp; REQUEST TO YOU ✦</div>
+          <p class="rishta-vow-text">
+            "Nidhu, I am so deeply grateful to have you in my life. And I am requesting and begging you from my heart—please, no matter how many fights happen between you and me, please don't ever leave me.<br/>
+            <span style="color:#ffe699; text-decoration:underline; text-underline-offset:6px;">Yeh rishta forever ka hai!</span>"
+          </p>
+          <div class="rishta-forever-stamp">
+            Brother &amp; Sister • Forever &amp; Always ♾️👑
+          </div>
+        </div>
+
+        <p style="margin-bottom:10px;">
+          Keep smiling that 18-year-old <em>mastkhor</em> small-girl smile, keep dancing with all your heart, and keep shining like the Barbie Princess you are. Happy Princess Day once again to the cutest, smartest, and loveliest sister in the world!
+        </p>
+
+        <div style="text-align:right; font-family:'Great Vibes',cursive; font-size:2.4rem; color:var(--barbie-hot); margin-top:14px;">
+          With Endless Love &amp; Pride, Your Brother (Momos) ✨👑
+        </div>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:30px;">
+        <button class="barbie-btn" onclick="sealForeverRishta()">
+          💖 Seal Our "Yeh Rishta Forever Ka Hai" Promise!
+        </button>
+        <button class="barbie-btn soft-outline" onclick="window.print()">
+          🖨️ Save / Print Brother's Royal Letter
+        </button>
+      </div>
+      <p id="rishtaConfirmedMsg" style="text-align:center; margin-top:16px; font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:700; font-style:italic; color:var(--barbie-hot); display:none;">
+        ✨ Sealed in the Royal Palace Stars: No matter how many fights, this Brother-Sister Rishta is Forever! ♾️💖 ✨
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    ✦ Crafted With Endless Love by Her Brother Exclusively For <strong>Beautiful Princess Nidhu</strong> • Yeh Rishta Forever Ka Hai ✦
+  </footer>
+
+  <!-- ==========================================================================
+       ERROR-FREE INTERACTIVE JAVASCRIPT ENGINE
+       ========================================================================== -->
+  <script>
+    /* 1. SCROLL REVEAL OBSERVER & TOP PROGRESS RIBBON */
+    (function initScrollAndReveal() {
+      const revealEls = document.querySelectorAll('.reveal-on-scroll');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        }, { threshold: 0.1 });
+        revealEls.forEach(el => revealObserver.observe(el));
+      } else {
+        revealEls.forEach(el => el.classList.add('is-visible'));
+      }
+
+      window.addEventListener('scroll', () => {
+        const top = window.scrollY || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - window.innerHeight;
+        const ribbon = document.getElementById('scrollRibbon');
+        if (ribbon) {
+          ribbon.style.width = (height > 0 ? (top / height) * 100 : 0) + '%';
+        }
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-item');
+        let current = '';
+        sections.forEach(s => {
+          if (top >= s.offsetTop - 260) current = s.getAttribute('id');
+        });
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+        });
+      });
+
+      const cursorHalo = document.getElementById('cursorHalo');
+      window.addEventListener('mousemove', e => {
+        if (cursorHalo) {
+          cursorHalo.style.left = e.clientX + 'px';
+          cursorHalo.style.top = e.clientY + 'px';
+        }
+      });
+    })();
+
+    /* 2. SAFE WEB AUDIO ROYAL HARP SYNTHESIZER */
+    let audioCtx = null;
+    function getAudioCtx() {
+      if (!audioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) audioCtx = new AudioContextClass();
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume().catch(() => {});
+      }
+      return audioCtx;
+    }
+
+    function playNote(freq, delay = 0, duration = 0.65) {
+      try {
+        const ctx = getAudioCtx();
+        if (!ctx) return;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + delay);
+        gain.gain.setValueAtTime(0.001, ctx.currentTime + delay);
+        gain.gain.linearRampToValueAtTime(0.12, ctx.currentTime + delay + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.0008, ctx.currentTime + delay + duration);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(ctx.currentTime + delay);
+        osc.stop(ctx.currentTime + delay + duration);
+      } catch (e) {}
+    }
+
+    function playRoyalArpeggio() {
+      [523.25, 659.25, 783.99, 1046.5, 1318.51].forEach((f, i) => playNote(f, i * 0.065, 0.78));
+    }
+
+    /* 3. ROTATING HERO POETIC VERSES */
+    const heroLines = [
+      '"Crowned in crystal filigree and draped in rose-pink tulle—she carries the timeless poise of twenty-two while guarding the radiant, mischievous soul of eighteen."',
+      '"Happy Princess Day to my beautiful sister Nidhu: always looking like a Barbie Princess, overflowing with cutiness, intelligence, and grace."',
+      '"Honestly, she is capable of achieving anything in this world—blessed with a brilliant mind and the sweetest heart."',
+      '"No matter how many fights happen between us, yeh rishta forever ka hai—today and for all eternity."'
+    ];
+    let heroIdx = 0;
+    setInterval(() => {
+      const el = document.getElementById('heroRotatingLine');
+      if (!el) return;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(6px)';
+      setTimeout(() => {
+        heroIdx = (heroIdx + 1) % heroLines.length;
+        el.textContent = heroLines[heroIdx];
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 400);
+    }, 4800);
+
+    /* 4. SECTION II: INTERACTIVE BARBIE CASTLE OF 6 CHAMBERS */
+    const castleSurprises = [
+      {
+        room: 'CHAMBER I • THE CROWN SPIRE',
+        title: 'The Sovereign Crystal Tiara',
+        body: '"Surprise #1: Today is Princess Day, and it is completely your day because you truly are a real-life Barbie Princess in both your crown and your heart!"'
+      },
+      {
+        room: 'CHAMBER II • THE MASTKHOR WHISPER WING',
+        title: 'The 22 vs. 18 Cutiness Paradox',
+        body: '"Surprise #2: Official Palace Records confirm that while your age says 22, 99.9% of your adorable antics, playful teasing, and giggles belong to an 18-year-old small girl!"'
+      },
+      {
+        room: 'CHAMBER III • THE STARLIGHT CONSERVATORY',
+        title: 'Her Unstoppable Passion for Dance',
+        body: '"Surprise #3: This grand ballroom was built solely for Nidhu—because the instant music begins, no one on earth can rival the expressiveness of her eyes or the grace of her dance steps."'
+      },
+      {
+        room: 'CHAMBER IV • THE ROYAL ROSE BALCONY',
+        title: 'Always Looking Like a Barbie Princess',
+        body: '"Surprise #4: Draped in embroidered sequin sleeves and waves of blush and magenta tulle in front of the fountain, you look like a living Barbie masterpiece!"'
+      },
+      {
+        room: 'CHAMBER V • THE HALL OF BRILLIANCE',
+        title: 'So Intelligent & Capable of Anything',
+        body: '"Surprise #5: Beyond how cute and lovely you are, you are fiercely intelligent and capable of achieving anything you set your mind to in this world!"'
+      },
+      {
+        room: 'CHAMBER VI • THE FOREVER RISHTA VAULT',
+        title: 'Yeh Rishta Forever Ka Hai ♾️',
+        body: '"Surprise #6: A promise from your brother—no matter how many fights happen between you and me, please never leave. Our bond is forever!"'
+      }
+    ];
+    const unlockedSet = new Set([0]);
+
+    function unlockCastleSurprise(idx) {
+      unlockedSet.add(idx);
+      const item = castleSurprises[idx];
+      document.getElementById('castleRoomTag').textContent = item.room;
+      document.getElementById('castleSurpriseTitle').textContent = item.title;
+      document.getElementById('castleSurpriseBody').textContent = item.body;
+      document.getElementById('castleUnlockCounter').textContent = `${unlockedSet.size} / 6 Royal Chambers`;
+      document.getElementById('castleProgressFill').style.width = `${(unlockedSet.size / 6) * 100}%`;
+
+      const btns = document.querySelectorAll('#castleButtonsWrap .tower-key-btn');
+      btns.forEach((b, i) => {
+        if (unlockedSet.has(i)) b.classList.add('unlocked');
+      });
+
+      playRoyalArpeggio();
+      burstPetals(window.innerWidth / 2, window.innerHeight / 2, 34);
+    }
+
+    /* 5. SECTION III: SINGLE MASTERPIECE PORTRAIT SANCTUARY & SMART FALLBACK */
+    const fallbackFiles = ['1000153305.jpg', '1000153305.jpeg', 'nidhu.png', 'nidhu.jpg'];
+    let fallbackAttempt = 0;
+
+    function handlePortraitFallback(imgEl) {
+      if (fallbackAttempt < fallbackFiles.length) {
+        imgEl.src = fallbackFiles[fallbackAttempt];
+        fallbackAttempt++;
+      } else {
+        const fb = document.getElementById('portraitFallbackOverlay');
+        if (fb) fb.style.display = 'flex';
+      }
+    }
+
+    function triggerSinglePhotoLoad() {
+      const input = document.getElementById('singlePortraitInput');
+      if (input) input.click();
+    }
+
+    function loadSingleMasterpiece(event) {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.getElementById('masterpiecePortraitImg');
+        const fb = document.getElementById('portraitFallbackOverlay');
+        if (img) img.src = e.target.result;
+        if (fb) fb.style.display = 'none';
+        playRoyalArpeggio();
+        burstPetals(window.innerWidth / 2, window.innerHeight / 2, 42);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function adjustPortraitAura() {
+      const b = document.getElementById('auraBrightness').value;
+      const c = document.getElementById('auraContrast').value;
+      const img = document.getElementById('masterpiecePortraitImg');
+      if (img) {
+        img.style.filter = `brightness(${b}%) contrast(${c}%) saturate(106%)`;
+      }
+    }
+
+    function setMonumentFinish(finishClass) {
+      const frame = document.getElementById('singleMonumentFrame');
+      if (!frame) return;
+      frame.classList.remove('finish-rose', 'finish-platinum');
+      if (finishClass !== 'gold') frame.classList.add(finishClass);
+      playNote(880, 0, 0.4);
+    }
+
+    const singleFrame = document.getElementById('singleMonumentFrame');
+    if (singleFrame) {
+      singleFrame.addEventListener('mousemove', e => {
+        const r = singleFrame.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        singleFrame.style.transform = `perspective(1000px) rotateX(${(-y / r.height) * 7}deg) rotateY(${(x / r.width) * 7}deg)`;
+      });
+      singleFrame.addEventListener('mouseleave', () => {
+        singleFrame.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+      });
+    }
+
+    /* 6. SECTION IV: LIVING BARBIE LOOKBOOK */
+    const lookbookDetails = [
+      {
+        tag: 'COUTURE ANNOTATION • THE CRYSTAL ROSE TIARA',
+        text: '"A crown is merely metalwork until it is worn by someone whose spirit is genuinely royal—and on Nidhu, every crystal finds its true purpose."'
+      },
+      {
+        tag: 'COUTURE ANNOTATION • EMBROIDERED SEQUIN & TULLE GOWN',
+        text: '"Intricate geometric beadwork along the sleeves gives way to cascading waves of blush and deep berry tulle—capturing movement even in stillness."'
+      },
+      {
+        tag: 'COUTURE ANNOTATION • THE FOUNTAIN COURTYARD',
+        text: '"Rising white fountain plumes and evergreen silhouettes frame her arrival like a royal fairytale garden."'
+      },
+      {
+        tag: 'COUTURE ANNOTATION • UNMATCHED CUTINESS & GRACE',
+        text: '"Her warm, over-the-shoulder smile holds the entire secret of Nidhuness: effortless Barbie elegance paired with joyful, approachable warmth."'
+      }
+    ];
+
+    function selectLookbookDetail(idx, cardEl) {
+      document.querySelectorAll('.lookbook-feature-card').forEach(c => c.classList.remove('active-look'));
+      if (cardEl) cardEl.classList.add('active-look');
+      const d = lookbookDetails[idx];
+      document.getElementById('lookbookSpotlightTag').textContent = d.tag;
+      document.getElementById('lookbookSpotlightText').textContent = d.text;
+      playNote(987.77, 0, 0.45);
+    }
+
+    /* 7. SECTION V: XXII GOING ON XVIII CALIBRATOR */
+    function updateNidhuSlider(val) {
+      const v = parseInt(val, 10);
+      document.getElementById('nidhuSliderLabel').textContent = v + '% Spirited Mastkhor';
+      const out = document.getElementById('nidhuSliderOutput');
+      if (v < 35) {
+        out.textContent = `"At ${v}% Resonance: Sovereign Twenty-Two-Year-Old Brilliance—intelligent, composed, and capable of conquering any goal."`;
+      } else if (v < 75) {
+        out.textContent = `"At ${v}% Resonance: The Golden Equilibrium—graceful and poised in her pink ballgown while a witty, playful remark is already forming in her mind."`;
+      } else {
+        out.textContent = `"At ${v}% Resonance: Unfiltered Eighteen-Year-Old Mastkhor Spirit! Bubbly laughter, expressive small-girl antics, and irresistible cutiness."`;
+      }
+    }
+
+    /* 8. SECTION VI: PRINCESS DAY GRAND BALLROOM & 8-COUNT CHOREOGRAPHY TRAINER */
+    const danceScale = [523.25, 587.33, 659.25, 783.99, 880.0, 783.99, 1046.5, 1318.51];
+    const princessDayStepCues = [
+      'Step 1: Graceful over-the-shoulder glance by the fountain, letting the crystal tiara catch the spotlight.',
+      'Step 2: Sweeping rose-pink tulle ballgown sway to the left with poised royal posture.',
+      'Step 3: Expressive abhinaya eye sparkle—blending 22-year-old grace with 18-year-old mischief.',
+      'Step 4: Full 360-degree princess pirouette as the layered magenta organza flares outward.',
+      'Step 5: Playful mastkhor smile and rhythmic hand flourish toward the royal balcony.',
+      'Step 6: Gliding waltz step across the stone promenade in effortless sync with the harp.',
+      'Step 7: Radiant starlight twirl with both hands lifting the cascading pink tulle hem.',
+      'Step 8: Sovereign Princess Day Finale Pose—head held high under the shining crown!'
+    ];
+
+    let dancePlaying = false;
+    let danceStep = 0;
+    let danceBpm = 122;
+    let danceTimer = null;
+
+    function setStageSpotlight(mode) {
+      const cone = document.getElementById('stageSpotlightCone');
+      if (!cone) return;
+      if (mode === 'rose') {
+        cone.style.background = 'linear-gradient(180deg, rgba(255, 182, 219, 0.5) 0%, rgba(255, 20, 129, 0.18) 65%, transparent 100%)';
+      } else if (mode === 'gold') {
+        cone.style.background = 'linear-gradient(180deg, rgba(255, 235, 150, 0.55) 0%, rgba(212, 175, 55, 0.2) 65%, transparent 100%)';
+      } else {
+        cone.style.background = 'linear-gradient(180deg, rgba(230, 190, 255, 0.5) 0%, rgba(142, 36, 170, 0.22) 65%, transparent 100%)';
+      }
+      playNote(1046.5, 0, 0.35);
+    }
+
+    function toggleSeqNote(btn, idx) {
+      btn.classList.toggle('armed');
+      if (btn.classList.contains('armed')) playNote(danceScale[idx], 0, 0.35);
+    }
+
+    function switchDancePreset(presetIdx, label, newBpm, btnEl) {
+      document.querySelectorAll('#sec-dance .barbie-btn.soft-outline').forEach(b => b.classList.remove('active-pill'));
+      if (btnEl) btnEl.classList.add('active-pill');
+      document.getElementById('danceModeTitle').textContent = label;
+      updateDanceTempo(newBpm);
+      const patterns = [
+        [1, 0, 1, 1, 1, 0, 1, 1],
+        [1, 1, 0, 1, 1, 0, 1, 1],
+        [1, 0, 1, 0, 1, 1, 0, 1],
+        [1, 1, 1, 0, 1, 1, 0, 1]
+      ];
+      const btns = document.querySelectorAll('.seq-note-btn');
+      patterns[presetIdx].forEach((on, i) => {
+        if (btns[i]) btns[i].classList.toggle('armed', on === 1);
+      });
+      if (!dancePlaying) toggleDanceSequencer();
+    }
+
+    function updateDanceTempo(val) {
+      danceBpm = parseInt(val, 10);
+      document.getElementById('bpmDisplay').textContent = danceBpm + ' BPM';
+      if (dancePlaying) {
+        clearInterval(danceTimer);
+        runDanceLoop();
+      }
+    }
+
+    function runDanceLoop() {
+      const intervalMs = (60 / danceBpm) * 1000 / 2;
+      danceTimer = setInterval(() => {
+        const notes = document.querySelectorAll('.seq-note-btn');
+        const counts = document.querySelectorAll('#countBoxesRow .count-box');
+        notes.forEach(n => n.classList.remove('playing-step'));
+        counts.forEach(c => c.classList.remove('active-beat'));
+
+        if (notes[danceStep]) {
+          notes[danceStep].classList.add('playing-step');
+          if (notes[danceStep].classList.contains('armed')) {
+            playNote(danceScale[danceStep], 0, 0.3);
+          }
+        }
+        if (counts[danceStep]) counts[danceStep].classList.add('active-beat');
+
+        document.getElementById('liveCountStepLabel').textContent = `COUNT 0${danceStep + 1} • PRINCESS DAY STAGE DIRECTION`;
+        document.getElementById('liveChoreoInstruction').textContent = `"${princessDayStepCues[danceStep]}"`;
+
+        triggerWavePulse();
+        danceStep = (danceStep + 1) % 8;
+      }, intervalMs);
+    }
+
+    function toggleDanceSequencer() {
+      dancePlaying = !dancePlaying;
+      const btn = document.getElementById('dancePlayBtn');
+      const vinyl = document.getElementById('vinylRecord');
+      if (dancePlaying) {
+        btn.textContent = '⏸ Pause Princess Day Gala Beat';
+        vinyl.classList.add('spinning');
+        runDanceLoop();
+      } else {
+        btn.textContent = '▶ Launch Princess Day 8-Count Gala Beat';
+        vinyl.classList.remove('spinning');
+        clearInterval(danceTimer);
+      }
+    }
+
+    const waveCanvas = document.getElementById('danceWaveCanvas');
+    const waveCtx = waveCanvas ? waveCanvas.getContext('2d') : null;
+    let bars = new Array(36).fill(10);
+
+    function triggerWavePulse() {
+      for (let i = 0; i < bars.length; i++) {
+        bars[i] = Math.random() * 64 + 14;
+      }
+    }
+
+    function drawDanceWave() {
+      if (waveCtx && waveCanvas) {
+        waveCtx.clearRect(0, 0, waveCanvas.width, waveCanvas.height);
+        const w = waveCanvas.width / bars.length;
+        for (let i = 0; i < bars.length; i++) {
+          bars[i] = Math.max(8, bars[i] * 0.92);
+          const h = bars[i];
+          const grad = waveCtx.createLinearGradient(0, waveCanvas.height - h, 0, waveCanvas.height);
+          grad.addColorStop(0, '#ffe699');
+          grad.addColorStop(0.5, '#ff1481');
+          grad.addColorStop(1, '#d4af37');
+          waveCtx.fillStyle = grad;
+          waveCtx.fillRect(i * w + 2, waveCanvas.height - h, w - 4, h);
+        }
+      }
+      requestAnimationFrame(drawDanceWave);
+    }
+    drawDanceWave();
+
+    /* 9. SECTION VII: TIARA JEWEL ATELIER */
+    const tiaraGems = [
+      {
+        title: 'GEMSTONE INSCRIPTION • THE RUBY ROSE OF UNMATCHED CUTINESS',
+        body: '"Set at the very center of her crown, this jewel reflects a sister who is too cute, too lovely, and always shining like a real-life Barbie Princess."'
+      },
+      {
+        title: 'GEMSTONE INSCRIPTION • THE PINK DIAMOND OF INTELLIGENCE',
+        body: '"Brilliant and sharp, honoring Nidhu\'s extraordinary intelligence and wise heart."'
+      },
+      {
+        title: 'GEMSTONE INSCRIPTION • THE IMPERIAL PEARL OF CAPABILITY',
+        body: '"Luminous and strong—reminding her that she is capable of achieving anything she dreams of in this world."'
+      },
+      {
+        title: 'GEMSTONE INSCRIPTION • THE AMETHYST OF DANCE & RHYTHM',
+        body: '"Faceted to catch every stage spotlight, celebrating a girl whose soul comes alive the moment she dances."'
+      },
+      {
+        title: 'GEMSTONE INSCRIPTION • THE GOLDEN CITRINE OF FOREVER RISHTA',
+        body: '"An unbreakable emblem of a brother and sister bond—no matter how many fights happen, yeh rishta forever ka hai!"'
+      }
+    ];
+
+    function selectTiaraGem(idx, el) {
+      document.querySelectorAll('.gemstone-card').forEach(c => c.classList.remove('active-gem'));
+      if (el) el.classList.add('active-gem');
+      document.getElementById('gemTitleBanner').textContent = tiaraGems[idx].title;
+      document.getElementById('gemBodyBanner').textContent = tiaraGems[idx].body;
+      playRoyalArpeggio();
+    }
+
+    /* 10. SECTION VIII: QUOTE VAULT FILTER & INSCRIBER */
+    function filterQuotesVault(cat, btnEl) {
+      document.querySelectorAll('#sec-quotes .barbie-btn.soft-outline').forEach(b => b.classList.remove('active-pill'));
+      if (btnEl) btnEl.classList.add('active-pill');
+      document.querySelectorAll('#quotesVaultGrid .pink-quote-card').forEach(c => {
+        c.style.display = (cat === 'all' || c.dataset.qcat === cat) ? 'flex' : 'none';
+      });
+      playNote(783.99, 0, 0.3);
+    }
+
+    const extraPrincessQuotes = [
+      { tag: '✦ VERSE VII • REAL-LIFE BARBIE', text: '"Seeing Nidhu in her pink tulle ballgown and crystal crown proves that fairytales never ended—they simply stepped into real life."', cat: 'princess' },
+      { tag: '✦ VERSE VIII • UNSTOPPABLE MIND', text: '"You are so intelligent and so capable, Nidhu—there is no dream too big and no summit too high for you."', cat: 'dance' },
+      { tag: '✦ VERSE IX • FOREVER BOND', text: '"Even if there are a thousand silly fights between us, not a single one can ever shake a bond that is meant for forever."', cat: 'mastkhor' }
+    ];
+    let extraQIdx = 0;
+
+    function addSecretPrincessQuote() {
+      const q = extraPrincessQuotes[extraQIdx % extraPrincessQuotes.length];
+      extraQIdx++;
+      const grid = document.getElementById('quotesVaultGrid');
+      const div = document.createElement('div');
+      div.className = 'pink-quote-card';
+      div.dataset.qcat = q.cat;
+      div.innerHTML = `
+        <span class="wing-tag">${q.tag}</span>
+        <p class="wing-quote-text" style="margin:10px 0 18px;">${q.text}</p>
+        <span style="font-size:0.72rem; font-weight:700; letter-spacing:1px; color:var(--barbie-hot);">ROYAL EDITION INSCRIPTION</span>
+      `;
+      grid.prepend(div);
+      playRoyalArpeggio();
+    }
+
+    /* 11. SECTION IX: ROYAL VANITY MIRROR */
+    const mirrorLines = [
+      '"In her rose-pink ballgown and crystal tiara, she is the living standard of Barbie elegance, intelligence, and the sweetest heartbeat in every room."',
+      '"Sovereign Reflection: Nidhu, you are too cute, too beautiful, and capable of achieving anything in this world!"',
+      '"Even the tall fountain waters behind her shimmer brighter when Nidhu turns back over her shoulder to smile."',
+      '"Royal Decree: No matter how many fights happen, your brother\'s bond with you is forever—yeh rishta forever ka hai!"'
+    ];
+    let mIdx = 0;
+
+    function askBarbieMirror() {
+      mIdx = (mIdx + 1) % mirrorLines.length;
+      document.getElementById('vanityMirrorQuote').textContent = mirrorLines[mIdx];
+      playRoyalArpeggio();
+      burstPetals(window.innerWidth / 2, window.innerHeight / 2, 30);
+    }
+
+    /* 12. SECTION XI: CROSS-BROWSER SAFE SKY LANTERN WISH SANCTUARY */
+    const lCanvas = document.getElementById('lanternCanvas');
+    const lCtx = lCanvas ? lCanvas.getContext('2d') : null;
+    let lanterns = [];
+    const lanternWishes = [
+      '"✨ Wish Released: Happy Princess Day to my beautiful, intelligent sister Nidhu! ✨"',
+      '"👑 Wish Released: May you achieve every dream—because you are capable of anything! 👑"',
+      '"🌸 Wish Released: No matter how many fights, yeh rishta forever ka hai! 🌸"',
+      '"💖 Wish Released: Keep dancing and shining like a Barbie Princess forever! 💖"'
+    ];
+    let wishIdx = 0;
+
+    function drawRoundedRectPath(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.lineTo(x + w - r, y);
+      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+      ctx.lineTo(x + w, y + h - r);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+      ctx.lineTo(x + r, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+      ctx.lineTo(x, y + r);
+      ctx.quadraticCurveTo(x, y, x + r, y);
+      ctx.closePath();
+    }
+
+    function resizeLanternCanvas() {
+      if (!lCanvas || !lCanvas.parentElement) return;
+      lCanvas.width = lCanvas.parentElement.clientWidth || 800;
+      lCanvas.height = lCanvas.parentElement.clientHeight || 350;
+    }
+    window.addEventListener('resize', resizeLanternCanvas);
+    resizeLanternCanvas();
+
+    function spawnLantern(x, y) {
+      lanterns.push({
+        x, y,
+        vy: -Math.random() * 0.85 - 0.45,
+        vx: (Math.random() - 0.5) * 0.35,
+        w: 22 + Math.random() * 10,
+        h: 30 + Math.random() * 12,
+        wobble: Math.random() * Math.PI * 2
+      });
+    }
+
+    for (let i = 0; i < 8; i++) {
+      spawnLantern(Math.random() * 700 + 50, Math.random() * 260 + 40);
+    }
+
+    function launchWishLantern(e) {
+      if (!lCanvas) return;
+      const rect = lCanvas.getBoundingClientRect();
+      spawnLantern(e.clientX - rect.left, e.clientY - rect.top);
+      wishIdx = (wishIdx + 1) % lanternWishes.length;
+      document.getElementById('lanternWishText').textContent = lanternWishes[wishIdx];
+      playRoyalArpeggio();
+    }
+
+    function releaseLanternFlotilla() {
+      if (!lCanvas) return;
+      for (let i = 0; i < 7; i++) {
+        setTimeout(() => {
+          spawnLantern(Math.random() * (lCanvas.width - 80) + 40, lCanvas.height - 30);
+        }, i * 160);
+      }
+      playRoyalArpeggio();
+    }
+
+    function animateLanterns() {
+      if (lCtx && lCanvas && lCanvas.width > 0) {
+        lCtx.clearRect(0, 0, lCanvas.width, lCanvas.height);
+        lanterns.forEach(l => {
+          l.y += l.vy;
+          l.wobble += 0.03;
+          l.x += Math.sin(l.wobble) * 0.35 + l.vx;
+          if (l.y < -50) {
+            l.y = lCanvas.height + 30;
+            l.x = Math.random() * lCanvas.width;
+          }
+          lCtx.save();
+          lCtx.translate(l.x, l.y);
+          lCtx.shadowBlur = 20;
+          lCtx.shadowColor = '#ffd700';
+          const grad = lCtx.createLinearGradient(0, -l.h / 2, 0, l.h / 2);
+          grad.addColorStop(0, '#ff1481');
+          grad.addColorStop(0.6, '#ff85c1');
+          grad.addColorStop(1, '#fff0b8');
+          lCtx.fillStyle = grad;
+          drawRoundedRectPath(lCtx, -l.w / 2, -l.h / 2, l.w, l.h, 7);
+          lCtx.fill();
+
+          lCtx.fillStyle = '#ffffff';
+          lCtx.beginPath();
+          lCtx.arc(0, l.h / 3, 3.5, 0, Math.PI * 2);
+          lCtx.fill();
+          lCtx.restore();
+        });
+      }
+      requestAnimationFrame(animateLanterns);
+    }
+    animateLanterns();
+
+    /* 13. GLOBAL ROSE PETAL & SPARKLE PARTICLE ENGINE */
+    const pCanvas = document.getElementById('petalCanvas');
+    const pCtx = pCanvas ? pCanvas.getContext('2d') : null;
+    let petals = [];
+
+    function resizePetalCanvas() {
+      if (!pCanvas) return;
+      pCanvas.width = window.innerWidth;
+      pCanvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizePetalCanvas);
+    resizePetalCanvas();
+
+    const petalColors = ['#ff1481', '#ff69b4', '#ffb6dc', '#ffd700', '#ffffff'];
+    for (let i = 0; i < 38; i++) {
+      petals.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        r: Math.random() * 4.2 + 2,
+        vx: (Math.random() - 0.5) * 0.55,
+        vy: Math.random() * 0.75 + 0.3,
+        angle: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.025,
+        color: petalColors[Math.floor(Math.random() * petalColors.length)],
+        burst: false,
+        alpha: 0.72
+      });
+    }
+
+    function burstPetals(x, y, count = 45) {
+      for (let i = 0; i < count; i++) {
+        const a = Math.random() * Math.PI * 2;
+        const s = Math.random() * 5 + 1.5;
+        petals.push({
+          x, y,
+          r: Math.random() * 5 + 2.5,
+          vx: Math.cos(a) * s,
+          vy: Math.sin(a) * s - 1.8,
+          angle: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.08,
+          color: petalColors[Math.floor(Math.random() * petalColors.length)],
+          burst: true,
+          alpha: 1
+        });
+      }
+    }
+
+    function renderPetals() {
+      if (pCtx && pCanvas) {
+        pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
+        for (let i = petals.length - 1; i >= 0; i--) {
+          const p = petals[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.angle += p.spin;
+
+          pCtx.save();
+          pCtx.translate(p.x, p.y);
+          pCtx.rotate(p.angle);
+          pCtx.globalAlpha = Math.max(0, p.alpha);
+          pCtx.fillStyle = p.color;
+          pCtx.beginPath();
+          pCtx.ellipse(0, 0, p.r * 1.4, p.r * 0.85, 0, 0, Math.PI * 2);
+          pCtx.fill();
+          pCtx.restore();
+
+          if (p.burst) {
+            p.vy += 0.08;
+            p.alpha -= 0.015;
+            if (p.alpha <= 0) petals.splice(i, 1);
+          } else {
+            if (p.y > pCanvas.height + 15) {
+              p.y = -15;
+              p.x = Math.random() * pCanvas.width;
+            }
+          }
+        }
+      }
+      requestAnimationFrame(renderPetals);
+    }
+    renderPetals();
+
+    function showerRosePetals() {
+      playRoyalArpeggio();
+      burstPetals(window.innerWidth / 2, window.innerHeight / 2.5, 55);
+    }
+
+    function grandRoyalFinale() {
+      playRoyalArpeggio();
+      for (let i = 0; i < 4; i++) {
+        setTimeout(() => {
+          burstPetals(
+            window.innerWidth * (0.2 + Math.random() * 0.6),
+            window.innerHeight * (0.2 + Math.random() * 0.5),
+            50
+          );
+        }, i * 220);
+      }
+    }
+
+    function sealForeverRishta() {
+      const msg = document.getElementById('rishtaConfirmedMsg');
+      if (msg) msg.style.display = 'block';
+      grandRoyalFinale();
+    }
+  </script>
+</body>
+</html>
